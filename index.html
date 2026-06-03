@@ -1,19 +1,136 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Games</title>
-</head>
-<body>
-  <h1>Mini Games</h1>
 
-  <ul>
-    <li><a href="./BRAIN RUNNER/">BRAIN RUNNER</a></li>
-    <li><a href="./Force & Motion Lab/">Force & Motion Lab</a></li>
-    <li><a href="./Math Adventure Game/">Math Adventure Game</a></li>
-    <li><a href="./Primary Knowledge Run/">Primary Knowledge Run</a></li>
-    <li><a href="./Spy Quest Detective Recognition/">Spy Quest Detective Recognition</a></li>
-    <li><a href="./Time Edition/">Time Edition</a></li>
-  </ul>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #101828, #1d2939);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1000px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #cbd5e1;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 18px;
+      padding: 28px 20px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card span {
+      color: #d1d5db;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: 35px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Mini Games</h1>
+    <p>Choose a game and start learning in a fun way</p>
+
+    <div class="games">
+      <a class="card" href="./BRAIN RUNNER/">
+        <div class="icon">🧠</div>
+        <h2>BRAIN RUNNER</h2>
+        <span>Fast thinking challenge</span>
+      </a>
+
+      <a class="card" href="./Force & Motion Lab/">
+        <div class="icon">🚀</div>
+        <h2>Force & Motion Lab</h2>
+        <span>Learn physics with motion</span>
+      </a>
+
+      <a class="card" href="./Math Adventure Game/">
+        <div class="icon">➗</div>
+        <h2>Math Adventure Game</h2>
+        <span>Solve math and level up</span>
+      </a>
+
+      <a class="card" href="./Primary Knowledge Run/">
+        <div class="icon">📚</div>
+        <h2>Primary Knowledge Run</h2>
+        <span>General knowledge game</span>
+      </a>
+
+      <a class="card" href="./Spy Quest Detective Recognition/">
+        <div class="icon">🕵️</div>
+        <h2>Spy Quest Detective Recognition</h2>
+        <span>Think like a detective</span>
+      </a>
+
+      <a class="card" href="./Time Edition/">
+        <div class="icon">⏰</div>
+        <h2>Time Edition</h2>
+        <span>Practice time skills</span>
+      </a>
+    </div>
+
+    <footer>
+      Created by Mini Games Project
+    </footer>
+  </div>
 </body>
 </html>
