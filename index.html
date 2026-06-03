@@ -4,133 +4,387 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mini Games</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
     }
 
-    body {
+    :root {
+      --bg: #07080f;
+      --surface: #0e1018;
+      --border: rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.15);
+      --text-primary: #f0f2ff;
+      --text-muted: #4a5068;
+      --text-secondary: #7b82a8;
+
+      --purple: #7c6cf5;
+      --purple-glow: rgba(124, 108, 245, 0.2);
+      --sky: #38b6f5;
+      --sky-glow: rgba(56, 182, 245, 0.2);
+      --amber: #f5a623;
+      --amber-glow: rgba(245, 166, 35, 0.2);
+      --green: #3ecf8e;
+      --green-glow: rgba(62, 207, 142, 0.2);
+      --pink: #f06292;
+      --pink-glow: rgba(240, 98, 146, 0.2);
+      --orange: #ff7043;
+      --orange-glow: rgba(255, 112, 67, 0.2);
+    }
+
+    html, body {
       min-height: 100vh;
-      background: linear-gradient(135deg, #101828, #1d2939);
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
     }
 
-    .container {
-      width: 100%;
-      max-width: 1000px;
+    /* Background grid */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Ambient orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .orb-1 {
+      width: 500px; height: 500px;
+      background: rgba(124, 108, 245, 0.1);
+      top: -200px; left: -100px;
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 400px; height: 400px;
+      background: rgba(56, 182, 245, 0.08);
+      bottom: -100px; right: -100px;
+      animation: drift 15s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes drift {
+      from { transform: translate(0, 0); }
+      to   { transform: translate(40px, 30px); }
+    }
+
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 80px 32px 60px;
+    }
+
+    /* Header */
+    header {
       text-align: center;
+      margin-bottom: 72px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--purple);
+      border: 1px solid rgba(124,108,245,0.3);
+      border-radius: 100px;
+      padding: 5px 16px;
+      margin-bottom: 24px;
+    }
+    .eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--purple);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--purple);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
     }
 
     h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(42px, 6vw, 68px);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1;
+      color: var(--text-primary);
+      margin-bottom: 16px;
     }
 
-    p {
-      color: #cbd5e1;
-      margin-bottom: 40px;
-      font-size: 18px;
+    h1 .accent {
+      background: linear-gradient(135deg, var(--purple) 0%, var(--sky) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .games {
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    /* Divider line */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--purple), transparent);
+      margin: 28px auto 0;
+    }
+
+    /* Grid */
+    .games-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
+    @media (max-width: 800px) {
+      .games-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .games-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Card */
     .card {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 18px;
-      padding: 28px 20px;
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 28px 28px;
       text-decoration: none;
-      color: white;
-      transition: 0.3s;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      color: var(--text-primary);
+      transition: transform 0.3s cubic-bezier(.22,.68,0,1.2), border-color 0.3s, background 0.3s;
+      overflow: hidden;
+      display: block;
+    }
+
+    /* Top shimmer line */
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: var(--card-color, var(--purple));
+      opacity: 0;
+      transition: opacity 0.3s;
+      filter: blur(1px);
+    }
+
+    /* Glow bg on hover */
+    .card::after {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, var(--card-glow, var(--purple-glow)) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-8px) scale(1.01);
+      border-color: var(--border-hover);
+    }
+    .card:hover::before { opacity: 1; }
+    .card:hover::after  { opacity: 1; }
+
+    .card-icon-wrap {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      margin-bottom: 20px;
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .card:hover .card-icon-wrap {
+      background: var(--card-glow, var(--purple-glow));
+      border-color: var(--card-color, var(--purple));
     }
 
-    .icon {
-      font-size: 42px;
-      margin-bottom: 15px;
+    .card-label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--card-color, var(--purple));
+      background: var(--card-glow, var(--purple-glow));
+      border: 1px solid var(--card-color, var(--purple));
+      border-radius: 100px;
+      padding: 2px 10px;
+      margin-bottom: 10px;
+      opacity: 0.85;
     }
 
     .card h2 {
-      font-size: 22px;
-      margin-bottom: 10px;
+      font-family: 'Syne', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 1.2;
+      letter-spacing: -0.3px;
     }
 
-    .card span {
-      color: #d1d5db;
-      font-size: 14px;
+    .card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-weight: 300;
     }
 
+    .card-arrow {
+      position: absolute;
+      bottom: 24px; right: 24px;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+    .card:hover .card-arrow {
+      background: var(--card-color, var(--purple));
+      color: white;
+      transform: rotate(45deg);
+      border-color: transparent;
+    }
+
+    /* Individual card colors */
+    .card-brain  { --card-color: var(--purple); --card-glow: var(--purple-glow); }
+    .card-rocket { --card-color: var(--sky);    --card-glow: var(--sky-glow); }
+    .card-math   { --card-color: var(--amber);  --card-glow: var(--amber-glow); }
+    .card-book   { --card-color: var(--green);  --card-glow: var(--green-glow); }
+    .card-spy    { --card-color: var(--pink);   --card-glow: var(--pink-glow); }
+    .card-clock  { --card-color: var(--orange); --card-glow: var(--orange-glow); }
+
+    /* Footer */
     footer {
-      margin-top: 35px;
-      color: #94a3b8;
-      font-size: 14px;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    /* Stagger animation on load */
+    .card {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.5s cubic-bezier(.22,.68,0,1.1) forwards;
+    }
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.12s; }
+    .card:nth-child(3) { animation-delay: 0.19s; }
+    .card:nth-child(4) { animation-delay: 0.26s; }
+    .card:nth-child(5) { animation-delay: 0.33s; }
+    .card:nth-child(6) { animation-delay: 0.40s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      opacity: 0;
+      animation: fadeUp 0.6s cubic-bezier(.22,.68,0,1.1) 0s forwards;
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
-    <h1>Mini Games</h1>
-    <p>Choose a game and start learning in a fun way</p>
 
-    <div class="games">
-      <a class="card" href="./BRAIN RUNNER/">
-        <div class="icon">🧠</div>
-        <h2>BRAIN RUNNER</h2>
-        <span>Fast thinking challenge</span>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="wrapper">
+    <header>
+      <div class="eyebrow">6 games available</div>
+      <h1>Mini <span class="accent">Games</span></h1>
+      <p class="subtitle">Choose a game and start learning in a fun way</p>
+      <div class="divider"></div>
+    </header>
+
+    <div class="games-grid">
+
+      <a class="card card-brain" href="./BRAIN RUNNER/">
+        <div class="card-icon-wrap">🧠</div>
+        <span class="card-label">Thinking</span>
+        <h2>Brain Runner</h2>
+        <p>Fast thinking challenge that sharpens your reaction speed</p>
+        <div class="card-arrow">→</div>
       </a>
 
-      <a class="card" href="./Force & Motion Lab/">
-        <div class="icon">🚀</div>
-        <h2>Force & Motion Lab</h2>
-        <span>Learn physics with motion</span>
+      <a class="card card-rocket" href="./Force & Motion Lab/">
+        <div class="card-icon-wrap">🚀</div>
+        <span class="card-label">Physics</span>
+        <h2>Force &amp; Motion Lab</h2>
+        <p>Learn physics through interactive motion experiments</p>
+        <div class="card-arrow">→</div>
       </a>
 
-      <a class="card" href="./Math Adventure Game/">
-        <div class="icon">➗</div>
-        <h2>Math Adventure Game</h2>
-        <span>Solve math and level up</span>
+      <a class="card card-math" href="./Math Adventure Game/">
+        <div class="card-icon-wrap">➗</div>
+        <span class="card-label">Math</span>
+        <h2>Math Adventure</h2>
+        <p>Solve math problems and level up your skills</p>
+        <div class="card-arrow">→</div>
       </a>
 
-      <a class="card" href="./Primary Knowledge Run/">
-        <div class="icon">📚</div>
+      <a class="card card-book" href="./Primary Knowledge Run/">
+        <div class="card-icon-wrap">📚</div>
+        <span class="card-label">General</span>
         <h2>Primary Knowledge Run</h2>
-        <span>General knowledge game</span>
+        <p>Test your knowledge across a range of topics</p>
+        <div class="card-arrow">→</div>
       </a>
 
-      <a class="card" href="./Spy Quest Detective Recognition/">
-        <div class="icon">🕵️</div>
-        <h2>Spy Quest Detective Recognition</h2>
-        <span>Think like a detective</span>
+      <a class="card card-spy" href="./Spy Quest Detective Recognition/">
+        <div class="card-icon-wrap">🕵️</div>
+        <span class="card-label">Logic</span>
+        <h2>Spy Quest Detective</h2>
+        <p>Solve cases and think like a seasoned detective</p>
+        <div class="card-arrow">→</div>
       </a>
 
-      <a class="card" href="./Time Edition/">
-        <div class="icon">⏰</div>
+      <a class="card card-clock" href="./Time Edition/">
+        <div class="card-icon-wrap">⏰</div>
+        <span class="card-label">Skills</span>
         <h2>Time Edition</h2>
-        <span>Practice time skills</span>
+        <p>Practice reading time and build clock confidence</p>
+        <div class="card-arrow">→</div>
       </a>
+
     </div>
 
-    <footer>
-      Created by Mini Games Project
-    </footer>
+    <footer>Created by Mini Games Project</footer>
   </div>
+
 </body>
 </html>
