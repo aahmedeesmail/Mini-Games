@@ -1,0 +1,2327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Force & Motion Lab ⚡</title>
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1a2e;
+      --sky: #16213e;
+      --accent: #e94560;
+      --gold: #f5a623;
+      --mint: #06d6a0;
+      --ice: #48cae4;
+      --purple: #7c3aed;
+      --white: #ffffff;
+      --panel: rgba(255,255,255,0.07);
+      --panel-border: rgba(255,255,255,0.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      background: radial-gradient(ellipse at 20% 50%, #1a1a2e 0%, #0f0f23 60%, #0a0a1a 100%);
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      font-family: 'Nunito', sans-serif;
+      color: var(--white);
+      overflow: auto;
+      padding: 14px;
+    }
+
+    /* ── STARS BG ── */
+    .bg-stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .bg-stars span {
+      position: absolute;
+      width: 2px; height: 2px;
+      background: #fff;
+      border-radius: 50%;
+      animation: twinkle 3s ease-in-out infinite;
+    }
+    @keyframes twinkle { 0%,100%{opacity:.2} 50%{opacity:.9} }
+
+    .game-wrapper {
+      position: relative;
+      z-index: 1;
+      width: min(1120px, 100%);
+      height: min(620px, calc(100vh - 28px));
+      min-height: 500px;
+      background: linear-gradient(135deg, rgba(26,26,46,0.97) 0%, rgba(22,33,62,0.97) 100%);
+      border: 2px solid var(--panel-border);
+      border-radius: 28px;
+      box-shadow: 0 0 80px rgba(233,69,96,0.18), 0 0 0 1px rgba(255,255,255,0.05), 0 30px 60px rgba(0,0,0,0.7);
+      overflow: hidden;
+    }
+
+    /* ── SCREENS ── */
+    .screen { position: absolute; inset: 0; display: none; }
+    .screen.active { display: flex; }
+
+    /* ── START SCREEN ── */
+    #startScreen {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 36px;
+    }
+    .logo-wrap { margin-bottom: 6px; }
+    .logo-icon { font-size: 4rem; animation: bounce 1.6s ease-in-out infinite; display: inline-block; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+    .game-title {
+      font-family: 'Fredoka One', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      background: linear-gradient(135deg, #e94560, #f5a623, #06d6a0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      letter-spacing: 1px;
+    }
+    .game-subtitle {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.55);
+      margin: 10px 0 28px;
+      font-weight: 700;
+    }
+    .feature-cards {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    .fcard {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 16px;
+      padding: 14px 18px;
+      width: 175px;
+      text-align: left;
+      backdrop-filter: blur(8px);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .fcard:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.3); }
+    .fcard .icon { font-size: 1.8rem; margin-bottom: 6px; display: block; }
+    .fcard strong { display: block; font-size: 0.95rem; color: var(--gold); margin-bottom: 3px; }
+    .fcard span { font-size: 0.82rem; color: rgba(255,255,255,0.55); line-height: 1.4; }
+    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    /* ── BUTTONS ── */
+    .btn {
+      border: none;
+      border-radius: 50px;
+      padding: 15px 34px;
+      font-size: 1.05rem;
+      font-weight: 900;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      transition: transform 0.12s, box-shadow 0.12s, filter 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0);
+      transition: background 0.2s;
+    }
+    .btn:hover::after { background: rgba(255,255,255,0.1); }
+    .btn:hover { transform: translateY(-3px); }
+    .btn:active { transform: translateY(2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, #e94560, #c9284c);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(233,69,96,0.45);
+    }
+    .btn-primary:hover { box-shadow: 0 12px 30px rgba(233,69,96,0.6); }
+    .btn-secondary {
+      background: var(--panel);
+      color: #fff;
+      border: 1.5px solid var(--panel-border);
+      box-shadow: none;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.35); }
+    .btn-mint {
+      background: linear-gradient(135deg, #06d6a0, #04a87e);
+      color: #0a2f25;
+      box-shadow: 0 8px 24px rgba(6,214,160,0.35);
+    }
+
+    /* ── HOW TO PLAY ── */
+    #instructionsScreen {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      text-align: center;
+    }
+    #instructionsScreen h2 {
+      font-family: 'Fredoka One', sans-serif;
+      font-size: 2.4rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      width: min(700px, 92%);
+      margin-bottom: 24px;
+    }
+    .how-item {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: left;
+    }
+    .how-item .hi { font-size: 1.5rem; margin-bottom: 8px; }
+    .how-item strong { display: block; font-size: 0.95rem; color: var(--mint); margin-bottom: 4px; }
+    .how-item p { font-size: 0.83rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+    /* keyboard keys */
+    kbd {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.82rem;
+      color: #fff;
+      margin: 0 2px;
+    }
+
+    /* ── GAME HUD ── */
+    #gameScreen { flex-direction: column; padding: 0; }
+    .hud {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 16px;
+      background: rgba(10,10,26,0.92);
+      border-bottom: 2px solid rgba(255,255,255,0.07);
+      z-index: 10;
+      flex-shrink: 0;
+    }
+    .hud-pill {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 50px;
+      padding: 7px 14px;
+      font-size: 0.88rem;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+    .hud-pill .label { color: rgba(255,255,255,0.45); font-size: 0.75rem; }
+    .hud-pill .value { color: #fff; }
+    .hud-pill.time-urgent .value { color: var(--accent); animation: pulse 0.5s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.5} }
+    .hud-pill.lives-1 .value { color: var(--accent); }
+    .hud-spacer { flex: 1; }
+    .level-bar-wrap {
+      position: relative;
+      flex: 1;
+      max-width: 200px;
+      height: 8px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .level-bar { height: 100%; background: linear-gradient(90deg, #06d6a0, #48cae4); border-radius: 999px; transition: width 0.6s ease; }
+
+    /* tip banner */
+    .tip-banner {
+      text-align: center;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.5);
+      padding: 6px 12px;
+      background: rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      flex-shrink: 0;
+      font-weight: 700;
+    }
+
+    .game-view {
+      flex: 1;
+      width: 100%;
+      overflow: auto;
+      background: rgba(0,0,0,0.12);
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.35) rgba(0,0,0,0.2);
+    }
+    .game-view::-webkit-scrollbar { height: 10px; width: 10px; }
+    .game-view::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); }
+    .game-view::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.35); border-radius: 999px; }
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      touch-action: none;
+    }
+    .zoom-tools {
+      position: absolute;
+      right: 14px;
+      top: 96px;
+      z-index: 14;
+      display: flex;
+      gap: 6px;
+      padding: 6px;
+      border-radius: 999px;
+      background: rgba(10,10,26,0.62);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+    }
+    .zoom-tools button {
+      width: 38px;
+      height: 34px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.09);
+      color: #fff;
+      border-radius: 999px;
+      font-weight: 900;
+      cursor: pointer;
+    }
+    .zoom-tools button:hover { background: rgba(255,255,255,0.18); }
+    .mini-map {
+      position: absolute;
+      left: 14px;
+      bottom: 72px;
+      width: 190px;
+      height: 66px;
+      z-index: 14;
+      border-radius: 14px;
+      background: rgba(10,10,26,0.68);
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+      pointer-events: none;
+      backdrop-filter: blur(6px);
+    }
+
+    /* touch controls */
+    .touch-controls {
+      display: none;
+      flex-shrink: 0;
+      background: rgba(0,0,0,0.35);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 10px 16px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .touch-btn {
+      width: 58px; height: 52px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      cursor: pointer;
+      transition: background 0.1s;
+    }
+    .touch-btn:active, .touch-btn.pressed { background: rgba(255,255,255,0.18); }
+    .touch-center { display: flex; gap: 10px; }
+    @media (pointer: coarse) {
+      .touch-controls { display: flex; }
+      .game-view { flex: none; height: calc(100% - 60px - 52px - 60px - 35px); }
+      canvas { height: 100%; }
+    }
+    @media (max-width: 640px) {
+      .touch-controls { display: flex; }
+      .how-grid { grid-template-columns: 1fr; }
+      .feature-cards { gap: 10px; }
+      .fcard { width: 140px; }
+    }
+
+    /* ── END SCREEN ── */
+    #endScreen {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 36px;
+      text-align: center;
+    }
+    #endScreen h2 {
+      font-family: 'Fredoka One', sans-serif;
+      font-size: clamp(2.2rem,5vw,3.5rem);
+      background: linear-gradient(135deg, #f5a623, #e94560);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .end-score-big {
+      font-family: 'Fredoka One', sans-serif;
+      font-size: clamp(3.5rem, 8vw, 5.5rem);
+      color: var(--gold);
+      text-shadow: 0 0 40px rgba(245,166,35,0.5);
+      margin: 8px 0;
+    }
+    .end-msg { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 12px; max-width: 500px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, rgba(245,166,35,0.2), rgba(233,69,96,0.2));
+      border: 1.5px solid rgba(245,166,35,0.4);
+      font-weight: 900;
+      font-size: 1rem;
+      margin-bottom: 24px;
+    }
+    .stats-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .stat-box {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      border-radius: 14px;
+      padding: 12px 20px;
+      text-align: center;
+    }
+    .stat-box .sv { font-size: 1.8rem; font-weight: 900; color: var(--mint); }
+    .stat-box .sl { font-size: 0.78rem; color: rgba(255,255,255,0.45); font-weight: 700; }
+
+    /* ── COMBO/TOAST NOTIFS ── */
+    #toast {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px);
+      background: linear-gradient(135deg, #f5a623, #e94560);
+      color: #fff;
+      font-weight: 900;
+      font-size: 1.1rem;
+      padding: 10px 24px;
+      border-radius: 50px;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 20;
+      white-space: nowrap;
+      transition: none;
+    }
+    #toast.show {
+      animation: toastAnim 1.8s ease forwards;
+    }
+    @keyframes toastAnim {
+      0% { opacity:0; transform:translateX(-50%) translateY(0px); }
+      15% { opacity:1; transform:translateX(-50%) translateY(-10px); }
+      70% { opacity:1; transform:translateX(-50%) translateY(-10px); }
+      100% { opacity:0; transform:translateX(-50%) translateY(-30px); }
+    }
+
+    /* level transition */
+    #levelFlash {
+      position: absolute;
+      inset: 0;
+      background: rgba(6,214,160,0.25);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 15;
+    }
+    #levelFlash.flash { animation: flashAnim 0.5s ease forwards; }
+    @keyframes flashAnim { 0%{opacity:1} 100%{opacity:0} }
+
+    #deathFlash {
+      position: absolute;
+      inset: 0;
+      background: rgba(233,69,96,0.3);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 15;
+    }
+    #deathFlash.flash { animation: flashAnim 0.6s ease forwards; }
+
+    /* pause overlay */
+    #pauseOverlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10,10,26,0.8);
+      z-index: 25;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #pauseOverlay.active { display: flex; }
+    #pauseOverlay h2 { font-family: 'Fredoka One', sans-serif; font-size: 3rem; color: var(--gold); margin-bottom: 20px; }
+  
+    /* ── CHATGPT FIX: compact no-scroll layout + minimap moved above ── */
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden !important;
+    }
+    body {
+      min-height: 100svh;
+      align-items: center;
+      padding: 8px;
+    }
+    .game-wrapper {
+      width: min(1120px, calc(100vw - 16px));
+      height: min(640px, calc(100svh - 16px));
+      min-height: 0;
+      border-radius: 22px;
+    }
+    #startScreen, #instructionsScreen, #endScreen {
+      padding: 16px;
+      overflow: hidden;
+    }
+    .logo-icon { font-size: 2.8rem; }
+    .game-title { font-size: clamp(2rem, 5vw, 3.9rem); }
+    .game-subtitle { margin: 6px 0 14px; font-size: 0.95rem; }
+    .feature-cards { gap: 8px; margin-bottom: 16px; }
+    .fcard { width: 145px; padding: 10px 12px; border-radius: 14px; }
+    .fcard .icon { font-size: 1.35rem; margin-bottom: 3px; }
+    .fcard strong { font-size: 0.82rem; margin-bottom: 0; }
+    .fcard span { font-size: 0.72rem; line-height: 1.25; }
+    .btn { padding: 10px 24px; font-size: 0.92rem; }
+    #instructionsScreen h2 { font-size: 2rem; margin-bottom: 12px; }
+    .how-grid { gap: 8px; margin-bottom: 14px; width: min(720px, 96%); }
+    .how-item { padding: 10px 12px; border-radius: 14px; }
+    .how-item .hi { font-size: 1.25rem; margin-bottom: 3px; }
+    .how-item strong { font-size: 0.82rem; margin-bottom: 2px; }
+    .how-item p { font-size: 0.72rem; line-height: 1.25; }
+    .hud { padding: 6px 10px; gap: 6px; }
+    .hud-pill { padding: 5px 10px; font-size: 0.78rem; }
+    .tip-banner { padding: 4px 10px; font-size: 0.72rem; }
+    .game-view {
+      overflow: hidden !important;
+      scrollbar-width: none;
+    }
+    .game-view::-webkit-scrollbar { display: none; }
+    canvas#gameCanvas {
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .zoom-tools {
+      display: none;
+    }
+    .mini-map {
+      left: auto;
+      right: 12px;
+      top: 78px;
+      bottom: auto;
+      width: 170px;
+      height: 58px;
+      opacity: 0.9;
+    }
+    .touch-controls {
+      padding: 6px 12px;
+      min-height: 54px;
+    }
+    .touch-btn {
+      width: 52px;
+      height: 44px;
+      font-size: 1.1rem;
+    }
+    @media (pointer: coarse) {
+      .game-view { flex: 1; height: auto; }
+    }
+    @media (max-width: 640px) {
+      body { padding: 4px; }
+      .game-wrapper {
+        width: calc(100vw - 8px);
+        height: calc(100svh - 8px);
+        border-radius: 16px;
+      }
+      .feature-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+      .fcard { width: auto; }
+      .hud {
+        flex-wrap: wrap;
+      }
+      .level-bar-wrap { display: none; }
+      .hud-spacer { display: none; }
+      .hud-pill { flex: 1; justify-content: center; min-width: 70px; }
+      #pauseBtn, #soundBtn { padding: 5px 9px !important; font-size: 0.85rem !important; }
+      .mini-map {
+        width: 120px;
+        height: 42px;
+        top: 92px;
+        right: 8px;
+      }
+      .tip-banner { padding-right: 132px; min-height: 34px; display:flex; align-items:center; justify-content:center; }
+      .touch-controls { display: flex; }
+      .touch-btn { width: 48px; height: 40px; }
+      #endScreen h2 { font-size: 2rem; }
+      .end-score-big { font-size: 3rem; }
+      .stats-row { gap: 8px; margin-bottom: 14px; }
+      .stat-box { padding: 8px 12px; }
+    }
+
+  
+
+    /* ── CHATGPT FIX 2: phone start screen compact layout ── */
+    @supports (height: 100dvh) {
+      body { min-height: 100dvh; }
+      .game-wrapper { height: min(640px, calc(100dvh - 8px)); }
+    }
+
+    @media (max-width: 640px) {
+      #startScreen {
+        justify-content: flex-start !important;
+        padding: 8px 10px !important;
+        gap: 0 !important;
+      }
+      .logo-wrap { margin-bottom: 0 !important; }
+      .logo-icon { font-size: 1.6rem !important; }
+      .game-title {
+        font-size: clamp(1.55rem, 8vw, 2.15rem) !important;
+        line-height: 1 !important;
+        margin-top: 0 !important;
+      }
+      .game-subtitle {
+        font-size: 0.68rem !important;
+        margin: 4px 0 8px !important;
+      }
+      .feature-cards {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin-bottom: 8px !important;
+      }
+      .fcard {
+        width: auto !important;
+        padding: 7px 8px !important;
+        min-height: 58px !important;
+        border-radius: 12px !important;
+        text-align: center !important;
+      }
+      .fcard .icon {
+        font-size: 1.15rem !important;
+        margin-bottom: 1px !important;
+      }
+      .fcard strong {
+        font-size: 0.72rem !important;
+        line-height: 1.05 !important;
+      }
+      .fcard span {
+        display: none !important;
+      }
+      .btn-row { gap: 6px !important; }
+      .btn {
+        padding: 8px 14px !important;
+        font-size: 0.76rem !important;
+      }
+      #instructionsScreen {
+        justify-content: flex-start !important;
+        padding: 8px !important;
+      }
+      #instructionsScreen h2 {
+        font-size: 1.45rem !important;
+        margin-bottom: 6px !important;
+      }
+      .how-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin-bottom: 8px !important;
+      }
+      .how-item {
+        padding: 7px !important;
+        border-radius: 10px !important;
+      }
+      .how-item .hi { font-size: 1rem !important; margin-bottom: 1px !important; }
+      .how-item strong { font-size: 0.66rem !important; margin-bottom: 1px !important; }
+      .how-item p { font-size: 0.54rem !important; line-height: 1.15 !important; }
+      kbd { padding: 1px 4px !important; font-size: 0.5rem !important; }
+    }
+
+    @media (max-height: 700px) and (max-width: 640px) {
+      .logo-icon { font-size: 1.25rem !important; }
+      .game-title { font-size: 1.55rem !important; }
+      .game-subtitle { display: none !important; }
+      .feature-cards { grid-template-columns: repeat(5, minmax(0, 1fr)) !important; }
+      .fcard { min-height: 50px !important; padding: 6px 4px !important; }
+      .fcard .icon { font-size: 1rem !important; }
+      .fcard strong { font-size: 0.58rem !important; }
+      .btn { padding: 7px 12px !important; font-size: 0.7rem !important; }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- background stars -->
+<div class="bg-stars" id="bgStars"></div>
+
+<div class="game-wrapper">
+  <!-- ── START ── -->
+  <section id="startScreen" class="screen active">
+    <div class="logo-wrap">
+      <span class="logo-icon">⚡</span>
+    </div>
+    <div class="game-title">Force &amp; Motion Lab</div>
+    <div class="game-subtitle">10 levels · 10 worlds · Real physics</div>
+    <div class="feature-cards">
+      <div class="fcard"><span class="icon">💥</span><strong>Force</strong><span>Push &amp; pull your ball with real physics forces</span></div>
+      <div class="fcard"><span class="icon">🌍</span><strong>Gravity</strong><span>Each world has different gravity to master</span></div>
+      <div class="fcard"><span class="icon">🧊</span><strong>Friction</strong><span>Surfaces range from silky ice to sticky sand</span></div>
+      <div class="fcard"><span class="icon">🧲</span><strong>Magnets</strong><span>Magnetic fields will pull your metal ball</span></div>
+      <div class="fcard"><span class="icon">⭐</span><strong>Combos</strong><span>Fast completions earn bonus score multipliers</span></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="startBtn">🚀 Play Now</button>
+      <button class="btn btn-secondary" id="instructionsBtn">📖 How to Play</button>
+    </div>
+  </section>
+
+  <!-- ── HOW TO PLAY ── -->
+  <section id="instructionsScreen" class="screen">
+    <h2>⚡ How to Play</h2>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="hi">🎮</div>
+        <strong>Controls</strong>
+        <p><kbd>←</kbd><kbd>→</kbd> or <kbd>A</kbd><kbd>D</kbd> to move · <kbd>Space</kbd> / <kbd>↑</kbd> to jump · <kbd>↑</kbd><kbd>↓</kbd> to climb ladders</p>
+      </div>
+      <div class="how-item">
+        <div class="hi">⭐</div>
+        <strong>Goal</strong>
+        <p>Reach the glowing star before time runs out. Touch platforms to understand each physics force.</p>
+      </div>
+      <div class="how-item">
+        <div class="hi">❤️</div>
+        <strong>Lives &amp; Danger</strong>
+        <p>You have <strong>3 lives</strong>. Hazards, falling off screen, or time-up each cost 1 life.</p>
+      </div>
+      <div class="how-item">
+        <div class="hi">🔥</div>
+        <strong>Difficulty</strong>
+        <p>Platforms shrink, hazards multiply, time shrinks — every 3 levels you'll feel the heat.</p>
+      </div>
+      <div class="how-item">
+        <div class="hi">⚡</div>
+        <strong>Speed Bonus</strong>
+        <p>Complete a level fast for a <strong>time bonus</strong>! Combo fast levels for a score multiplier.</p>
+      </div>
+      <div class="how-item">
+        <div class="hi">📱</div>
+        <strong>Mobile</strong>
+        <p>Touch the on-screen buttons to move &amp; jump. Works great on phones and tablets!</p>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-mint" id="playFromInstructions">🚀 Let's Go!</button>
+      <button class="btn btn-secondary" id="backBtn">← Back</button>
+    </div>
+  </section>
+
+  <!-- ── GAME ── -->
+  <section id="gameScreen" class="screen">
+    <div class="hud">
+      <div class="hud-pill" id="hudLevel">
+        <span class="label">LVL</span><span class="value" id="levelText">1/10</span>
+      </div>
+      <div class="level-bar-wrap">
+        <div class="level-bar" id="levelBar" style="width:3%"></div>
+      </div>
+      <div class="hud-pill" id="hudScore">
+        <span class="label">⭐</span><span class="value" id="scoreText">0</span>
+      </div>
+      <div class="hud-spacer"></div>
+      <div class="hud-pill" id="hudLives">
+        <span class="value" id="livesText">❤️❤️❤️</span>
+      </div>
+      <div class="hud-pill" id="hudTime">
+        <span class="label">⏱</span><span class="value" id="timeText">30</span>
+      </div>
+      <button class="btn btn-secondary" id="pauseBtn" style="padding:7px 14px;font-size:1rem;">⏸</button>
+      <button class="btn btn-secondary" id="soundBtn" title="Sound on/off" style="padding:7px 14px;font-size:1rem;">🔊</button>
+    </div>
+    <div class="tip-banner" id="tipBanner">Use ← → to move and Space to jump. Reach the star!</div>
+    <div class="game-view" id="gameView">
+      <canvas id="gameCanvas"></canvas>
+    </div>
+    <div class="zoom-tools" aria-label="Zoom controls">
+      <button id="zoomOutBtn" title="Zoom out">−</button>
+      <button id="zoomResetBtn" title="Reset zoom">100%</button>
+      <button id="zoomInBtn" title="Zoom in">+</button>
+    </div>
+    <canvas class="mini-map" id="miniMap" width="190" height="66"></canvas>
+    <!-- touch controls -->
+    <div class="touch-controls" id="touchControls">
+      <button class="touch-btn" id="touchLeft">◀</button>
+      <div class="touch-center">
+        <button class="touch-btn" id="touchJump">⬆ JUMP</button>
+      </div>
+      <button class="touch-btn" id="touchRight">▶</button>
+    </div>
+    <!-- overlays -->
+    <div id="toast"></div>
+    <div id="levelFlash"></div>
+    <div id="deathFlash"></div>
+    <div id="pauseOverlay">
+      <h2>⏸ Paused</h2>
+      <div class="btn-row">
+        <button class="btn btn-mint" id="resumeBtn">▶ Resume</button>
+        <button class="btn btn-secondary" id="pauseHomeBtn">🏠 Home</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── END ── -->
+  <section id="endScreen" class="screen">
+    <h2 id="endTitle">🎉 Well Done!</h2>
+    <div class="end-score-big" id="finalScore">0</div>
+    <p class="end-msg" id="endMessage">You've explored force, gravity, and motion like a real scientist!</p>
+    <div class="badge" id="badgeText">⭐ Physics Explorer</div>
+    <div class="stats-row">
+      <div class="stat-box"><div class="sv" id="endStars">0</div><div class="sl">Stars Collected</div></div>
+      <div class="stat-box"><div class="sv" id="endLevels">0</div><div class="sl">Levels Reached</div></div>
+      <div class="stat-box"><div class="sv" id="endBest">0</div><div class="sl">Best Combo</div></div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-primary" id="restartBtn">🔁 Play Again</button>
+      <button class="btn btn-secondary" id="homeBtn">🏠 Home</button>
+    </div>
+  </section>
+</div>
+
+<script>
+'use strict';
+
+/* ── BG STARS ── */
+(function(){
+  const c = document.getElementById('bgStars');
+  for(let i=0;i<60;i++){
+    const s = document.createElement('span');
+    s.style.left = Math.random()*100+'%';
+    s.style.top = Math.random()*100+'%';
+    s.style.animationDelay = Math.random()*3+'s';
+    s.style.animationDuration = (2+Math.random()*3)+'s';
+    s.style.opacity = Math.random()*0.6;
+    c.appendChild(s);
+  }
+})();
+
+/* ── DOM refs ── */
+const startScreen = document.getElementById('startScreen');
+const instructionsScreen = document.getElementById('instructionsScreen');
+const gameScreen = document.getElementById('gameScreen');
+const endScreen = document.getElementById('endScreen');
+const startBtn = document.getElementById('startBtn');
+const instructionsBtn = document.getElementById('instructionsBtn');
+const playFromInstructions = document.getElementById('playFromInstructions');
+const backBtn = document.getElementById('backBtn');
+const restartBtn = document.getElementById('restartBtn');
+const homeBtn = document.getElementById('homeBtn');
+const resumeBtn = document.getElementById('resumeBtn');
+const pauseHomeBtn = document.getElementById('pauseHomeBtn');
+const pauseBtn = document.getElementById('pauseBtn');
+const soundBtn = document.getElementById('soundBtn');
+const pauseOverlay = document.getElementById('pauseOverlay');
+const levelText = document.getElementById('levelText');
+const scoreText = document.getElementById('scoreText');
+const livesText = document.getElementById('livesText');
+const timeText = document.getElementById('timeText');
+const levelBar = document.getElementById('levelBar');
+const tipBanner = document.getElementById('tipBanner');
+const hudTime = document.getElementById('hudTime');
+const hudLives = document.getElementById('hudLives');
+const endTitle = document.getElementById('endTitle');
+const endMessage = document.getElementById('endMessage');
+const finalScore = document.getElementById('finalScore');
+const badgeText = document.getElementById('badgeText');
+const endStars = document.getElementById('endStars');
+const endLevels = document.getElementById('endLevels');
+const endBest = document.getElementById('endBest');
+const toast = document.getElementById('toast');
+const levelFlash = document.getElementById('levelFlash');
+const deathFlash = document.getElementById('deathFlash');
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const gameView = document.getElementById('gameView');
+const miniMap = document.getElementById('miniMap');
+const miniCtx = miniMap.getContext('2d');
+const zoomOutBtn = document.getElementById('zoomOutBtn');
+const zoomInBtn = document.getElementById('zoomInBtn');
+const zoomResetBtn = document.getElementById('zoomResetBtn');
+
+/* Canvas roundRect fallback for older browsers */
+if (CanvasRenderingContext2D.prototype.roundRect === undefined) {
+  CanvasRenderingContext2D.prototype.roundRect = function (x, y, w, h, r) {
+    r = Math.min(r || 0, Math.abs(w) / 2, Math.abs(h) / 2);
+    this.beginPath();
+    this.moveTo(x + r, y);
+    this.lineTo(x + w - r, y);
+    this.quadraticCurveTo(x + w, y, x + w, y + r);
+    this.lineTo(x + w, y + h - r);
+    this.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    this.lineTo(x + r, y + h);
+    this.quadraticCurveTo(x, y + h, x, y + h - r);
+    this.lineTo(x, y + r);
+    this.quadraticCurveTo(x, y, x + r, y);
+    this.closePath();
+    return this;
+  };
+}
+
+/* ── STATE ── */
+let animationId = null;
+let timerId = null;
+let level = 1;
+let score = 0;
+let lives = 3;
+let timeLeft = 30;
+let starsCollected = 0;
+let gameRunning = false;
+let paused = false;
+let respawning = false;
+let levelData = [];
+let particles = [];
+let combo = 0;
+let bestCombo = 0;
+let levelReached = 1;
+let gameZoom = 1;
+
+const TOTAL_LEVELS = 10;
+
+const keys = {
+  ArrowLeft:false, ArrowRight:false, ArrowUp:false, ArrowDown:false,
+  Space:false, KeyA:false, KeyD:false, KeyW:false, KeyS:false
+};
+function resetKeys() {
+  Object.keys(keys).forEach(k => { keys[k] = false; });
+}
+
+
+/* ── SOUND SYSTEM (no external files needed) ── */
+let audioCtx = null;
+let soundEnabled = true;
+let masterGain = null;
+let lastLandSound = 0;
+let jumpHeld = false;
+
+function initAudio() {
+  if (audioCtx) return;
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContext) return;
+  audioCtx = new AudioContext();
+  masterGain = audioCtx.createGain();
+  masterGain.gain.value = 0.22;
+  masterGain.connect(audioCtx.destination);
+}
+
+function resumeAudio() {
+  initAudio();
+  if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
+}
+
+function tone(freq, duration, type, volume, delay, slideTo) {
+  if (!soundEnabled || !audioCtx || !masterGain) return;
+  const now = audioCtx.currentTime + (delay || 0);
+  const osc = audioCtx.createOscillator();
+  const gain = audioCtx.createGain();
+  osc.type = type || 'sine';
+  osc.frequency.setValueAtTime(freq, now);
+  if (slideTo) osc.frequency.exponentialRampToValueAtTime(Math.max(1, slideTo), now + duration);
+  gain.gain.setValueAtTime(0.0001, now);
+  gain.gain.exponentialRampToValueAtTime(Math.max(0.0001, volume || 0.1), now + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+  osc.connect(gain);
+  gain.connect(masterGain);
+  osc.start(now);
+  osc.stop(now + duration + 0.04);
+}
+
+function noise(duration, volume, delay) {
+  if (!soundEnabled || !audioCtx || !masterGain) return;
+  const now = audioCtx.currentTime + (delay || 0);
+  const bufferSize = Math.max(1, Math.floor(audioCtx.sampleRate * duration));
+  const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+  const data = buffer.getChannelData(0);
+  for (let i = 0; i < bufferSize; i++) data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
+  const source = audioCtx.createBufferSource();
+  const gain = audioCtx.createGain();
+  source.buffer = buffer;
+  gain.gain.setValueAtTime(volume || 0.06, now);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+  source.connect(gain);
+  gain.connect(masterGain);
+  source.start(now);
+}
+
+const SFX = {
+  click() { resumeAudio(); tone(520, 0.05, 'triangle', 0.07); },
+  start() { resumeAudio(); tone(392, 0.09, 'sine', 0.10); tone(523, 0.10, 'sine', 0.10, 0.08); tone(784, 0.14, 'triangle', 0.12, 0.17); },
+  jump() { resumeAudio(); tone(300, 0.16, 'square', 0.08, 0, 620); },
+  land() { const now = performance.now(); if (now - lastLandSound < 120) return; lastLandSound = now; tone(120, 0.08, 'sine', 0.055, 0, 80); noise(0.05, 0.025); },
+  star() { tone(660, 0.09, 'triangle', 0.12); tone(880, 0.10, 'triangle', 0.12, 0.08); tone(1320, 0.16, 'sine', 0.12, 0.18); },
+  hurt() { tone(220, 0.20, 'sawtooth', 0.11, 0, 90); noise(0.15, 0.06); },
+  win() { tone(523, 0.10, 'triangle', 0.12); tone(659, 0.10, 'triangle', 0.12, 0.10); tone(784, 0.10, 'triangle', 0.12, 0.20); tone(1046, 0.22, 'sine', 0.14, 0.32); },
+  gameover() { tone(330, 0.18, 'sawtooth', 0.10); tone(247, 0.20, 'sawtooth', 0.10, 0.18); tone(165, 0.30, 'sawtooth', 0.10, 0.38); },
+  pause() { tone(440, 0.07, 'sine', 0.07); tone(330, 0.08, 'sine', 0.07, 0.08); },
+  resume() { tone(330, 0.07, 'sine', 0.07); tone(440, 0.08, 'sine', 0.07, 0.08); },
+  ladder() { tone(260, 0.05, 'triangle', 0.025); }
+};
+
+function updateSoundButton() {
+  if (soundBtn) soundBtn.textContent = soundEnabled ? '🔊' : '🔇';
+}
+
+/* ── TOUCH CONTROLS ── */
+function bindTouch(id, key) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.addEventListener('touchstart', e => { e.preventDefault(); keys[key] = true; el.classList.add('pressed'); }, { passive: false });
+  el.addEventListener('touchend', e => { e.preventDefault(); keys[key] = false; el.classList.remove('pressed'); });
+  el.addEventListener('mousedown', e => { keys[key] = true; el.classList.add('pressed'); });
+  el.addEventListener('mouseup', e => { keys[key] = false; el.classList.remove('pressed'); });
+}
+bindTouch('touchLeft', 'ArrowLeft');
+bindTouch('touchRight', 'ArrowRight');
+bindTouch('touchJump', 'Space');
+
+/* ── PARTICLE SYSTEM ── */
+function spawnParticles(x, y, color, count, speed) {
+  for (let i = 0; i < count; i++) {
+    const angle = (Math.random() * Math.PI * 2);
+    const spd = (0.5 + Math.random()) * (speed || 3);
+    particles.push({
+      x, y,
+      vx: Math.cos(angle) * spd,
+      vy: Math.sin(angle) * spd - Math.random() * 2,
+      life: 1,
+      decay: 0.04 + Math.random() * 0.03,
+      r: 3 + Math.random() * 5,
+      color: color || '#ffd166'
+    });
+  }
+}
+
+function updateParticles() {
+  particles = particles.filter(p => p.life > 0);
+  particles.forEach(p => {
+    p.x += p.vx;
+    p.y += p.vy;
+    p.vy += 0.15;
+    p.life -= p.decay;
+    p.r *= 0.97;
+  });
+}
+
+function drawParticles() {
+  particles.forEach(p => {
+    ctx.globalAlpha = p.life;
+    ctx.fillStyle = p.color;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+  });
+  ctx.globalAlpha = 1;
+}
+
+/* ── BALL ── */
+const ball = { x:70, y:360, r:18, vx:0, vy:0, onGround:false, trail:[], squishY:1, squishX:1 };
+
+/* ── LEVEL TEMPLATES ── */
+// Layout shapes: 'stair-up','stair-down','zigzag','high-low','island','canyon','tower','wide-gap','U-shape','spiral'
+const placeTemplates = [
+  {
+    // LAYOUT: Wide ground with tall wall ladders + floating mid island
+    placeNumber: 1, name: 'Playground Push Park', theme: 'playground',
+    time: 38, gravity: 0.38, force: 1.1, friction: 0.92,
+    lesson: '🏃 Push the ball — force changes motion!',
+    platforms: [
+      { x:0,   y:430, w:220, h:70,  type:'grass' },           // start ground
+      { x:220, y:355, w:110, h:18,  type:'wood'  },           // low step
+      { x:220, y:280, w:110, h:18,  type:'wood', ladder:true },// with ladder up
+      { x:430, y:430, w:140, h:70,  type:'grass' },           // mid ground
+      { x:430, y:330, w:110, h:18,  type:'wood'  },           // mid shelf
+      { x:580, y:220, w:160, h:18,  type:'wood', ladder:true },// high shelf
+      { x:790, y:310, w:120, h:18,  type:'wood'  },           // drop-down
+      { x:860, y:430, w:140, h:70,  type:'grass' }            // end ground
+    ],
+    ladders: [
+      { x:290, y1:280, y2:355 },   // connects platforms 1→2
+      { x:640, y1:220, y2:330 }    // connects platforms 4→5
+    ],
+    hazards: [
+      { x:345, y:445, w:80, h:14, type:'puddle' },
+      { x:570, y:412, w:55, h:14, type:'spike'  }
+    ],
+    star: { x:630, y:170 }, start: { x:60, y:390 }
+  },
+  {
+    // LAYOUT: Zigzag — left-right alternating high/low
+    placeNumber: 2, name: 'Slippery Ice Zigzag', theme: 'ice',
+    time: 35, gravity: 0.40, force: 1.0, friction: 0.988,
+    lesson: '🧊 Ice = low friction. You slide farther!',
+    platforms: [
+      { x:0,   y:430, w:200, h:70, type:'ice' },              // start
+      { x:250, y:300, w:140, h:18, type:'ice' },              // high left
+      { x:435, y:400, w:130, h:18, type:'ice' },              // low mid
+      { x:610, y:270, w:130, h:18, type:'ice' },              // high right
+      { x:785, y:390, w:110, h:18, type:'ice' },              // low right
+      { x:890, y:430, w:110, h:70, type:'ice' }               // end ground
+    ],
+    ladders: [
+      { x:310, y1:300, y2:430 },
+      { x:670, y1:270, y2:400 }
+    ],
+    hazards: [
+      { x:205, y:444, w:42, h:14, type:'crack' },
+      { x:570, y:414, w:38, h:14, type:'crack' },
+      { x:738, y:405, w:42, h:14, type:'crack' }
+    ],
+    star: { x:650, y:220 }, start: { x:60, y:385 }
+  },
+  {
+    // LAYOUT: Stair UP on left, then big canyon with bridge, then high platform
+    placeNumber: 3, name: 'Desert Canyon Run', theme: 'desert',
+    time: 34, gravity: 0.44, force: 1.3, friction: 0.82,
+    lesson: '🏜️ Sand grips tight — more friction!',
+    platforms: [
+      { x:0,   y:430, w:160, h:70, type:'sand' },
+      { x:175, y:370, w:120, h:18, type:'sand' },
+      { x:175, y:305, w:120, h:18, type:'sand', ladder:true },
+      { x:175, y:240, w:120, h:18, type:'sand', ladder:true },
+      { x:360, y:390, w:85,  h:18, type:'sand' },             // small stepping stone
+      { x:500, y:310, w:85,  h:18, type:'sand' },             // another
+      { x:640, y:230, w:85,  h:18, type:'sand' },             // top
+      { x:770, y:310, w:85,  h:18, type:'sand' },             // descend
+      { x:860, y:430, w:140, h:70, type:'sand' }
+    ],
+    ladders: [
+      { x:235, y1:240, y2:305 },
+      { x:235, y1:305, y2:370 }
+    ],
+    hazards: [
+      { x:302, y:447, w:55, h:14, type:'cactus' },
+      { x:453, y:404, w:42, h:14, type:'cactus' },
+      { x:726, y:404, w:40, h:14, type:'spike'  }
+    ],
+    star: { x:700, y:185 }, start: { x:60, y:388 }
+  },
+  {
+    // LAYOUT: Wide gaps in space — must use floaty low-g jumps
+    placeNumber: 4, name: 'Moon Gravity Station', theme: 'space',
+    time: 36, gravity: 0.18, force: 0.85, friction: 0.95,
+    lesson: '🌙 Low gravity — jumps float high & far!',
+    platforms: [
+      { x:0,   y:440, w:170, h:60, type:'moon' },
+      { x:260, y:360, w:100, h:18, type:'moon' },             // far gap jump
+      { x:440, y:440, w:90,  h:60, type:'moon' },             // mid island
+      { x:440, y:290, w:90,  h:18, type:'moon' },             // high above island
+      { x:620, y:380, w:100, h:18, type:'moon' },
+      { x:800, y:300, w:100, h:18, type:'moon' },
+      { x:870, y:440, w:130, h:60, type:'moon' }
+    ],
+    ladders: [
+      { x:480, y1:290, y2:440 }
+    ],
+    hazards: [
+      { x:175, y:454, w:80, h:14, type:'asteroid' },
+      { x:543, y:454, w:72, h:14, type:'asteroid' },
+      { x:730, y:394, w:64, h:14, type:'spike'    }
+    ],
+    star: { x:850, y:250 }, start: { x:60, y:395 }
+  },
+  {
+    // LAYOUT: U-shape — go down, cross bottom, climb back up (magnet at top right)
+    placeNumber: 5, name: 'Magnet Science Lab', theme: 'magnet',
+    time: 33, gravity: 0.40, force: 1.1, friction: 0.91,
+    magnetPull: 0.04,
+    lesson: '🧲 Magnets attract metal — feel the pull!',
+    platforms: [
+      { x:0,   y:220, w:160, h:20, type:'metal' },            // start high
+      { x:0,   y:430, w:160, h:70, type:'metal' },            // left ground
+      { x:175, y:375, w:100, h:18, type:'metal' },
+      { x:330, y:430, w:360, h:70, type:'metal' },            // wide bottom
+      { x:700, y:375, w:100, h:18, type:'metal' },
+      { x:810, y:430, w:190, h:70, type:'metal' },            // right ground
+      { x:820, y:220, w:180, h:20, type:'metal' }             // end high
+    ],
+    ladders: [
+      { x:80,  y1:220, y2:430 },   // left ladder down
+      { x:900, y1:220, y2:430 }    // right ladder up
+    ],
+    hazards: [
+      { x:285, y:446, w:40, h:14, type:'electric' },
+      { x:545, y:446, w:40, h:14, type:'electric' },
+      { x:692, y:389, w:40, h:14, type:'spike'    }
+    ],
+    star: { x:910, y:165 }, magnet: { x:500, y:100 }, start: { x:60, y:175 }
+  },
+  {
+    // LAYOUT: Multiple narrow branches — pick your path (forest)
+    placeNumber: 6, name: 'Forest Branch Paths', theme: 'forest',
+    time: 34, gravity: 0.40, force: 1.1, friction: 0.87,
+    lesson: '🌲 Wood has medium friction — steady steps!',
+    platforms: [
+      { x:0,   y:430, w:180, h:70, type:'moss'  },            // start
+      { x:195, y:360, w:120, h:18, type:'log'   },            // branch A low
+      { x:195, y:260, w:120, h:18, type:'moss', ladder:true },// branch A high
+      { x:380, y:310, w:100, h:18, type:'log'   },            // mid cross
+      { x:530, y:260, w:120, h:18, type:'moss'  },            // branch B high
+      { x:530, y:360, w:120, h:18, type:'log'   },            // branch B low
+      { x:710, y:290, w:130, h:18, type:'moss', ladder:true },// climb
+      { x:840, y:430, w:160, h:70, type:'moss'  }             // end
+    ],
+    ladders: [
+      { x:255, y1:260, y2:360 },
+      { x:770, y1:290, y2:430 }
+    ],
+    hazards: [
+      { x:322, y:446, w:52, h:14, type:'thorn' },
+      { x:487, y:374, w:38, h:14, type:'thorn' },
+      { x:658, y:446, w:48, h:14, type:'spike' }
+    ],
+    star: { x:775, y:240 }, start: { x:60, y:385 }
+  },
+  {
+    // LAYOUT: Island hopping over ocean — bobbing floats at different heights
+    placeNumber: 7, name: 'Ocean Island Hop', theme: 'ocean',
+    time: 33, gravity: 0.38, force: 1.05, friction: 0.93,
+    lesson: '🌊 Bobbing platforms have kinetic energy!',
+    platforms: [
+      { x:0,   y:435, w:175, h:65, type:'float', bob:true, bobAmp:6,  bobOff:0.0 },
+      { x:225, y:395, w:110, h:18, type:'float', bob:true, bobAmp:10, bobOff:0.8 },
+      { x:390, y:350, w:90,  h:18, type:'float', bob:true, bobAmp:14, bobOff:1.6 },
+      { x:530, y:395, w:110, h:18, type:'float', bob:true, bobAmp:10, bobOff:2.4 },
+      { x:690, y:340, w:90,  h:18, type:'float', bob:true, bobAmp:14, bobOff:3.2 },
+      { x:835, y:390, w:100, h:18, type:'float', bob:true, bobAmp:8,  bobOff:0.5 },
+      { x:860, y:435, w:140, h:65, type:'float', bob:true, bobAmp:5,  bobOff:1.0 }
+    ],
+    hazards: [
+      { x:180, y:450, w:40, h:14, type:'wave'  },
+      { x:485, y:410, w:40, h:14, type:'wave'  },
+      { x:780, y:405, w:50, h:14, type:'spike' }
+    ],
+    star: { x:490, y:300 }, start: { x:60, y:390 }
+  },
+  {
+    // LAYOUT: Tower climb — tall left wall with stacked ledges, then rooftop race right
+    placeNumber: 8, name: 'City Tower Climb', theme: 'city',
+    time: 32, gravity: 0.42, force: 1.15, friction: 0.89,
+    lesson: '🏙️ Climb high — potential energy builds!',
+    platforms: [
+      { x:0,   y:430, w:140, h:70,  type:'concrete' },        // street
+      { x:0,   y:340, w:140, h:18,  type:'concrete', ladder:true },
+      { x:0,   y:255, w:140, h:18,  type:'concrete', ladder:true },
+      { x:0,   y:170, w:140, h:18,  type:'concrete', ladder:true },
+      { x:155, y:170, w:130, h:18,  type:'concrete' },        // rooftop bridge
+      { x:340, y:220, w:100, h:18,  type:'concrete' },        // drop to right
+      { x:500, y:310, w:100, h:18,  type:'concrete' },
+      { x:660, y:380, w:100, h:18,  type:'concrete' },
+      { x:820, y:300, w:100, h:18,  type:'concrete' },
+      { x:860, y:430, w:140, h:70,  type:'concrete' }
+    ],
+    ladders: [
+      { x:70, y1:170, y2:255 },
+      { x:70, y1:255, y2:340 },
+      { x:70, y1:340, y2:430 }
+    ],
+    hazards: [
+      { x:150, y:445, w:55, h:14, type:'traffic' },
+      { x:448, y:325, w:48, h:14, type:'spike'   },
+      { x:762, y:395, w:52, h:14, type:'spike'   }
+    ],
+    star: { x:910, y:250 }, start: { x:60, y:390 }
+  },
+  {
+    // LAYOUT: Volcano — descend across hot rocks, then big climb on right
+    placeNumber: 9, name: 'Volcano Rock Hop', theme: 'volcano',
+    time: 30, gravity: 0.46, force: 1.25, friction: 0.85,
+    lesson: '🌋 Lava has massive thermal energy!',
+    platforms: [
+      { x:0,   y:230, w:160, h:20, type:'rock' },             // start HIGH
+      { x:200, y:300, w:100, h:20, type:'rock' },
+      { x:350, y:380, w:100, h:20, type:'rock' },             // descend
+      { x:495, y:430, w:120, h:70, type:'rock' },             // lava pit edge
+      { x:670, y:370, w:100, h:20, type:'rock' },             // climb back
+      { x:810, y:290, w:100, h:20, type:'rock' },
+      { x:840, y:430, w:160, h:70, type:'rock' }
+    ],
+    ladders: [
+      { x:880, y1:290, y2:430 }
+    ],
+    hazards: [
+      { x:165, y:440, w:30, h:14, type:'lava'  },
+      { x:308, y:395, w:38, h:14, type:'lava'  },
+      { x:458, y:446, w:32, h:14, type:'lava'  },
+      { x:620, y:446, w:44, h:14, type:'lava'  }
+    ],
+    star: { x:870, y:240 }, start: { x:60, y:185 }
+  },
+  {
+    // LAYOUT: Spiral up — platforms spiral clockwise around center
+    placeNumber: 10, name: 'Rainbow Sky Spiral', theme: 'rainbow',
+    time: 31, gravity: 0.32, force: 1.0, friction: 0.96,
+    lesson: '🌈 Smooth clouds — very low friction!',
+    platforms: [
+      { x:0,   y:430, w:180, h:60, type:'cloud', bob:true, bobAmp:5,  bobOff:0.0 },
+      { x:210, y:380, w:130, h:18, type:'cloud', bob:true, bobAmp:8,  bobOff:0.5 },
+      { x:390, y:430, w:100, h:60, type:'cloud', bob:true, bobAmp:6,  bobOff:1.0 },// mid island
+      { x:540, y:355, w:110, h:18, type:'cloud', bob:true, bobAmp:10, bobOff:1.5 },
+      { x:390, y:275, w:110, h:18, type:'cloud', bob:true, bobAmp:8,  bobOff:2.0 },// loop back left
+      { x:220, y:210, w:130, h:18, type:'cloud', bob:true, bobAmp:6,  bobOff:2.5 },
+      { x:430, y:150, w:130, h:18, type:'cloud', bob:true, bobAmp:5,  bobOff:3.0 },
+      { x:680, y:200, w:130, h:18, type:'cloud', bob:true, bobAmp:8,  bobOff:0.8 },
+      { x:840, y:430, w:160, h:60, type:'cloud', bob:true, bobAmp:5,  bobOff:0.0 }
+    ],
+    hazards: [
+      { x:348, y:446, w:38, h:14, type:'storm' },
+      { x:500, y:444, w:36, h:14, type:'storm' },
+      { x:648, y:370, w:28, h:14, type:'spike' }
+    ],
+    star: { x:750, y:150 }, start: { x:60, y:390 }
+  }
+];
+
+function cloneData(v) { return JSON.parse(JSON.stringify(v)); }
+
+function shuffleTemplates() {
+  const deck = placeTemplates.slice();
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+  return deck;
+}
+
+function makeHarderLevel(template, stage) {
+  const data = cloneData(template);
+  const diff = stage - 1;
+  const hardStep = Math.floor(diff / 3);
+
+  data.stage = stage;
+  data.displayName = template.name;
+  data.time = Math.max(16, template.time - Math.floor(diff * 0.45));
+  data.gravity = template.gravity + Math.min(0.10, diff * 0.004);
+  data.force = template.force + Math.min(0.24, diff * 0.008);
+  data.friction = Math.max(0.74, template.friction - Math.min(0.045, diff * 0.0015));
+  data.jumpPower = Math.min(11.8, Math.max(9.4, 8.9 + data.gravity * 3.6));
+  if (data.magnetPull) data.magnetPull += Math.min(0.035, diff * 0.0015);
+
+  // Keep the designed routes reachable. Difficulty now increases gently,
+  // instead of creating impossible jump distances by moving platforms too much.
+  data.platforms = data.platforms.map(function(p, idx) {
+    const moved = cloneData(p);
+    if (idx > 0 && idx < data.platforms.length - 1) {
+      moved.y -= Math.min(18, hardStep * 3);
+      moved.w = Math.max(90, moved.w - Math.min(20, hardStep * 3));
+    }
+    return moved;
+  });
+
+  // Add hazards progressively, but keep them on the floor area so they do not
+  // block required landing spots on small platforms.
+  const extra = Math.min(4, Math.floor(diff / 6));
+  const hTypes = data.hazards.length > 0 ? data.hazards.map(h => h.type) : ['spike'];
+  const hazardSlots = [340, 475, 610, 745];
+  for (let i = 0; i < extra; i++) {
+    const x = hazardSlots[i] + ((stage * 17) % 35);
+    data.hazards.push({ x: Math.min(x, 825), y:452, w:38, h:14, type:hTypes[i % hTypes.length] });
+  }
+
+  // Add moving hazard at high levels
+  if (stage > 8) {
+    data.movingHazard = { x: 400, y: 350, w: 36, h: 14, vx: 1.6 + (stage - 8) * 0.08, type: 'spike' };
+  }
+
+  return data;
+}
+
+function generateGameLevels() {
+  const levels = [];
+  let deck = [];
+  let lastPlace = null;
+
+  for (let s = 1; s <= TOTAL_LEVELS; s++) {
+    if (deck.length === 0) {
+      deck = shuffleTemplates();
+      // Shuffle the 10 worlds once, so each playthrough has 10 different places
+      // without repeating a place before the game ends.
+      if (lastPlace !== null && deck[0].placeNumber === lastPlace) {
+        const swapIdx = deck.findIndex(t => t.placeNumber !== lastPlace);
+        if (swapIdx > 0) [deck[0], deck[swapIdx]] = [deck[swapIdx], deck[0]];
+      }
+    }
+
+    const t = deck.shift();
+    lastPlace = t.placeNumber;
+    levels.push(makeHarderLevel(t, s));
+  }
+  return levels;
+}
+
+/* ── SCREEN MANAGEMENT ── */
+function showScreen(screen) {
+  [startScreen, instructionsScreen, gameScreen, endScreen].forEach(s => s.classList.remove('active'));
+  screen.classList.add('active');
+}
+
+function showToast(msg, color) {
+  toast.textContent = msg;
+  toast.style.background = color || 'linear-gradient(135deg, #f5a623, #e94560)';
+  toast.classList.remove('show');
+  void toast.offsetWidth;
+  toast.classList.add('show');
+}
+
+/* ── CANVAS RESIZE ── */
+function resizeCanvas() {
+  const viewRect = gameView.getBoundingClientRect();
+
+  // Fit the full level inside the visible game area.
+  // This removes scrolling and makes the whole map visible.
+  const baseW = Math.max(360, Math.floor(viewRect.width));
+  const baseH = Math.max(260, Math.floor(viewRect.height));
+
+  canvas.style.width = '100%';
+  canvas.style.height = '100%';
+  canvas.width = baseW;
+  canvas.height = baseH;
+
+  if (zoomResetBtn) zoomResetBtn.textContent = 'FIT';
+}
+
+function setZoom(value) {
+  // Keep zoom buttons harmless while the game is in fit-to-screen mode.
+  gameZoom = 1;
+  resizeCanvas();
+  gameView.scrollLeft = 0;
+  gameView.scrollTop = 0;
+  if (gameRunning && !paused) draw();
+}
+
+function centerCameraOnBall() {
+  // No camera scrolling needed: the full map is fitted on the screen.
+  gameView.scrollLeft = 0;
+  gameView.scrollTop = 0;
+}
+
+/* ── HUD UPDATE ── */
+function updateHUD() {
+  levelText.textContent = level + '/' + TOTAL_LEVELS;
+  scoreText.textContent = score.toLocaleString();
+  levelBar.style.width = Math.round((level / TOTAL_LEVELS) * 100) + '%';
+  timeText.textContent = timeLeft;
+  // Lives
+  const hearts = '❤️'.repeat(Math.max(0, lives)) + '🖤'.repeat(Math.max(0, 3 - lives));
+  livesText.textContent = hearts;
+  hudTime.className = 'hud-pill' + (timeLeft <= 8 ? ' time-urgent' : '');
+  hudLives.className = 'hud-pill' + (lives === 1 ? ' lives-1' : '');
+}
+
+function getLevelData() { return levelData[level - 1]; }
+
+/* ── BOB animation time ── */
+let bobTime = 0;
+
+function loadLevel() {
+  const data = getLevelData();
+  timeLeft = data.time;
+  ball.x = sx(data.start.x);
+  ball.y = sy(data.start.y);
+  ball.vx = 0; ball.vy = 0;
+  ball.onGround = false;
+  ball.trail = [];
+  ball.squishY = 1; ball.squishX = 1;
+  ball._lastSurface = null;
+  particles = [];
+  tipBanner.textContent = data.lesson || 'Reach the star!';
+  updateHUD();
+}
+
+function startGame() {
+  SFX.start();
+  levelData = generateGameLevels();
+  level = 1; score = 0; lives = 3;
+  starsCollected = 0; combo = 0; bestCombo = 0; levelReached = 1;
+  resetKeys();
+  gameRunning = true; paused = false; respawning = false;
+  pauseOverlay.classList.remove('active');
+  showScreen(gameScreen);
+  resizeCanvas();
+  loadLevel();
+  setTimeout(() => centerCameraOnBall(), 50);
+  clearInterval(timerId);
+  timerId = setInterval(updateTimer, 1000);
+  cancelAnimationFrame(animationId);
+  gameLoop();
+}
+
+function updateTimer() {
+  if (!gameRunning || paused || respawning) return;
+  timeLeft--;
+  updateHUD();
+  if (timeLeft <= 0) loseLife('⏱ Time up! Move faster next time.');
+}
+
+function loseLife(msg) {
+  if (!gameRunning || respawning) return;
+  SFX.hurt();
+  respawning = true;
+  lives--;
+  combo = 0;
+  spawnParticles(ball.x, ball.y, '#e94560', 20, 5);
+  deathFlash.classList.remove('flash');
+  void deathFlash.offsetWidth;
+  deathFlash.classList.add('flash');
+  updateHUD();
+  if (lives <= 0) { endGame(false, msg); return; }
+  tipBanner.textContent = '💔 ' + msg;
+  showToast('💔 -1 Life!', 'linear-gradient(135deg,#e94560,#c9284c)');
+  setTimeout(() => { if (gameRunning) { loadLevel(); respawning = false; } }, 700);
+}
+
+function nextLevel() {
+  SFX.star();
+  const data = getLevelData();
+  combo++;
+  if (combo > bestCombo) bestCombo = combo;
+  starsCollected++;
+  levelReached = Math.max(levelReached, level);
+  const timeBonus = timeLeft * 8;
+  const comboBonus = combo > 2 ? combo * 50 : 0;
+  score += 100 + timeBonus + comboBonus;
+
+  spawnParticles(data.star.x * (canvas.width / 1000), data.star.y * (canvas.height / 500), '#ffd166', 30, 5);
+  levelFlash.classList.remove('flash');
+  void levelFlash.offsetWidth;
+  levelFlash.classList.add('flash');
+
+  let msg = '⭐ +' + (100 + timeBonus);
+  if (comboBonus > 0) msg += '  🔥 Combo x' + combo + ' +' + comboBonus + '!';
+  showToast(msg);
+
+  if (level >= TOTAL_LEVELS) { SFX.win(); endGame(true, 'You mastered all 10 levels!'); return; }
+  level++;
+  loadLevel();
+}
+
+function endGame(won, msg) {
+  if (!won) SFX.gameover();
+  gameRunning = false; respawning = false; resetKeys();
+  clearInterval(timerId);
+  cancelAnimationFrame(animationId);
+  showScreen(endScreen);
+  endTitle.textContent = won ? '🎉 You Win!' : '💥 Game Over';
+  endMessage.textContent = msg || 'Thanks for playing!';
+  finalScore.textContent = score.toLocaleString();
+  endStars.textContent = starsCollected;
+  endLevels.textContent = levelReached;
+  endBest.textContent = bestCombo;
+
+  if (score >= 4000) badgeText.textContent = '🏆 Master of Motion ⭐⭐⭐';
+  else if (score >= 2200) badgeText.textContent = '🔬 Force Expert ⭐⭐';
+  else if (score >= 900) badgeText.textContent = '🧪 Physics Student ⭐';
+  else badgeText.textContent = '🔭 Physics Explorer';
+}
+
+/* ── SURFACE FRICTION ── */
+function getSurfaceFriction(type, def) {
+  if (type === 'sand' || type === 'rock') return 0.74;
+  if (type === 'ice') return 0.995;
+  if (type === 'cloud' || type === 'float') return 0.97;
+  if (type === 'metal' || type === 'concrete') return 0.91;
+  if (type === 'moss' || type === 'log') return 0.85;
+  return def;
+}
+
+/* ── SCALE COORDS ── */
+function sx(x) { return x * (canvas.width / 1000); }
+function sy(y) { return y * (canvas.height / 500); }
+
+/* ── PHYSICS ── */
+
+function getTouchedLadder() {
+  const data = getLevelData();
+  if (!data || !data.ladders) return null;
+  for (const ladder of data.ladders) {
+    const lx = sx(ladder.x);
+    const top = sy(Math.min(ladder.y1, ladder.y2));
+    const bottom = sy(Math.max(ladder.y1, ladder.y2));
+    if (Math.abs(ball.x - lx) < 28 && ball.y + ball.r > top && ball.y - ball.r < bottom) {
+      return { x: lx, top, bottom };
+    }
+  }
+  return null;
+}
+
+function drawLadders() {
+  const data = getLevelData();
+  if (!data || !data.ladders) return;
+  ctx.save();
+  data.ladders.forEach(ladder => {
+    const lx = sx(ladder.x);
+    const top = sy(Math.min(ladder.y1, ladder.y2));
+    const bottom = sy(Math.max(ladder.y1, ladder.y2));
+    ctx.strokeStyle = '#8b5e34';
+    ctx.lineWidth = 5;
+    ctx.lineCap = 'round';
+    ctx.beginPath(); ctx.moveTo(lx - 12, top); ctx.lineTo(lx - 12, bottom); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(lx + 12, top); ctx.lineTo(lx + 12, bottom); ctx.stroke();
+
+    ctx.strokeStyle = '#f4a261';
+    ctx.lineWidth = 4;
+    for (let y = top + 10; y < bottom; y += 22) {
+      ctx.beginPath(); ctx.moveTo(lx - 16, y); ctx.lineTo(lx + 16, y); ctx.stroke();
+    }
+  });
+  ctx.restore();
+}
+
+function applyPhysics() {
+  const data = getLevelData();
+  bobTime += 0.03;
+
+  // Magnet
+  if (data.magnet && data.magnetPull) {
+    const mx = sx(data.magnet.x), my = sy(data.magnet.y);
+    const dx = mx - ball.x, dy = my - ball.y;
+    const dist = Math.max(Math.hypot(dx, dy), 80);
+    ball.vx += (dx / dist) * data.magnetPull * 1.2;
+    ball.vy += (dy / dist) * data.magnetPull * 1.2;
+  }
+
+  // Player force — gentle acceleration feel
+  if (keys.ArrowLeft || keys.KeyA) ball.vx -= data.force * 0.38;
+  if (keys.ArrowRight || keys.KeyD) ball.vx += data.force * 0.38;
+
+  const ladder = getTouchedLadder();
+  const wantsJump = keys.Space || (!ladder && (keys.ArrowUp || keys.KeyW));
+  const wantsUp = keys.ArrowUp || keys.KeyW;
+  const wantsDown = keys.ArrowDown || keys.KeyS;
+  const climbing = ladder && (wantsUp || wantsDown);
+  if (!wantsJump) jumpHeld = false;
+
+  if (wantsJump && (ball.onGround || ladder)) {
+    ball.vy = -(data.jumpPower || 9.8);
+    ball.onGround = false;
+    ball.squishY = 0.6; ball.squishX = 1.5;
+    spawnParticles(ball.x, ball.y + ball.r, '#48cae4', 6, 2);
+  } else if (climbing) {
+    ball.x += (ladder.x - ball.x) * 0.18;
+    ball.vx *= 0.75;
+    ball.vy = wantsUp ? -3.1 : 3.1;
+    ball.onGround = true;
+    showFact('🪜 Climb to change height — that changes potential energy!', ball.x, ball.y - 35, '#ffd166');
+  }
+
+  // Gravity
+  if (!climbing) ball.vy += data.gravity;
+  ball.x += ball.vx;
+  ball.y += ball.vy;
+
+  // Squish recover
+  ball.squishY += (1 - ball.squishY) * 0.2;
+  ball.squishX += (1 - ball.squishX) * 0.2;
+
+  // Platform collisions
+  let currentFriction = data.friction;
+  ball.onGround = false;
+
+  data.platforms.forEach((platform, idx) => {
+    let py = sy(platform.y);
+    if (platform.bob) py += Math.sin(bobTime + idx * 0.7) * 8;
+    const px = sx(platform.x), pw = sx(platform.w), ph = sy(platform.h);
+
+    const hitTop = ball.x + ball.r > px &&
+                   ball.x - ball.r < px + pw &&
+                   ball.y + ball.r > py &&
+                   ball.y + ball.r < py + ph + Math.abs(ball.vy) + 4 &&
+                   ball.vy >= 0;
+    if (hitTop) {
+      ball.y = py - ball.r;
+      if (ball.vy > 3) { ball.squishY = 0.7; ball.squishX = 1.3; }
+      const wasAir = !ball.onGround;
+      if (wasAir) SFX.land();
+      ball.vy = 0;
+      ball.onGround = true;
+      currentFriction = getSurfaceFriction(platform.type, data.friction);
+      // Show surface fact first time landing (throttled)
+      if (wasAir && ball.vy === 0 && !ball._lastSurface) {
+        ball._lastSurface = platform.type;
+        const surfFacts = {
+          ice:      '🧊 Ice has very low friction — you slide far!',
+          sand:     '🏜 Sand grips hard — high friction surface!',
+          grass:    '🌿 Grass has moderate friction to grip your feet.',
+          wood:     '🪵 Wood platforms have medium friction.',
+          moss:     '🌿 Damp moss is slippery — moderate friction.',
+          log:      '🪵 Logs roll — watch your balance!',
+          cloud:    '☁ Clouds are light — very low resistance!',
+          float:    '🌊 Floating platforms bob with wave energy.',
+          metal:    '⚙ Metal is smooth but not as slick as ice.',
+          concrete: '🏗 Concrete is rough — good grip!',
+          rock:     '🪨 Rock surfaces create strong friction.',
+          moon:     '🌙 Moon gravity is 1/6 of Earth gravity!',
+        };
+        if (surfFacts[platform.type]) {
+          showFact(surfFacts[platform.type], ball.x, ball.y - 38, '#06d6a0');
+        }
+        setTimeout(() => { ball._lastSurface = null; }, 3000);
+      }
+    }
+  });
+
+  if (ball.onGround) ball.vx *= currentFriction;
+  else ball.vx *= 0.978;   // more air resistance
+
+  // Speed cap — still comfortable, but enough for fair gap jumps
+  ball.vx = Math.max(Math.min(ball.vx, 6.2), -6.2);
+
+  // Bounds
+  if (ball.x - ball.r < 0) { ball.x = ball.r; ball.vx *= -0.3; }
+  if (ball.x + ball.r > canvas.width) { ball.x = canvas.width - ball.r; ball.vx *= -0.3; }
+
+  // Trail
+  ball.trail.unshift({ x: ball.x, y: ball.y });
+  if (ball.trail.length > 14) ball.trail.pop();
+
+  // Hazards — show educational fact before losing life
+  let hitHazard = false;
+  data.hazards.forEach(h => {
+    if (!hitHazard && circleRect(ball, sx(h.x), sy(h.y), sx(h.w), sy(h.h))) {
+      hitHazard = true;
+      const facts = {
+        spike:    '📌 Spikes exert a sharp contact force!',
+        lava:     '🔥 Lava = molten rock at 700–1200°C!',
+        electric: '⚡ Electricity flows when circuits close!',
+        puddle:   '💧 Water adds drag — slows your motion!',
+        crack:    '❄ Ice cracks under too much pressure!',
+        cactus:   '🌵 Cactus spines are modified leaves!',
+        asteroid: '☄ Asteroids travel without air friction!',
+        thorn:    '🌿 Thorns deter with contact force!',
+        wave:     '🌊 Waves transfer energy, not matter!',
+        traffic:  '🚧 Traffic cones reduce collision risk!',
+        storm:    '⛈ Storms carry massive kinetic energy!'
+      };
+      showFact(facts[h.type] || '💥 Danger!', ball.x, ball.y - 30, '#e94560');
+      loseLife('💥 ' + (facts[h.type] || 'Danger zone!'));
+    }
+  });
+
+  // Moving hazard
+  if (!hitHazard && data.movingHazard) {
+    const mh = data.movingHazard;
+    mh.x += mh.vx;
+    if (mh.x > 900 || mh.x < 100) mh.vx *= -1;
+    if (circleRect(ball, sx(mh.x), sy(mh.y), sx(mh.w), sy(mh.h))) {
+      showFact('🏃 Moving objects carry momentum!', ball.x, ball.y - 30, '#e94560');
+      loseLife('💥 Hit by a moving hazard! Objects in motion stay in motion.');
+    }
+  }
+
+  // Fall off
+  if (ball.y - ball.r > canvas.height + 50) loseLife('🌍 Gravity won! You fell off.');
+
+  // Star
+  const data2 = getLevelData();
+  if (data2 && Math.hypot(ball.x - sx(data2.star.x), ball.y - sy(data2.star.y)) < ball.r + 28) {
+    nextLevel();
+  }
+}
+
+function circleRect(b, rx, ry, rw, rh) {
+  return b.x + b.r > rx && b.x - b.r < rx + rw && b.y + b.r > ry && b.y - b.r < ry + rh;
+}
+
+/* ── DRAW ── */
+function drawBackground() {
+  const data = getLevelData();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const w = canvas.width, h = canvas.height;
+
+  const themes = {
+    playground: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#87ceeb'); g.addColorStop(1,'#b0e8ff');
+      ctx.fillStyle = g; ctx.fillRect(0,0,w,h);
+      drawSun(w*0.1, h*0.14, '#fff7a8');
+      ctx.fillStyle='rgba(255,255,255,0.8)'; drawCloud(w*0.28,h*0.15); drawCloud(w*0.65,h*0.1); drawCloud(w*0.88,h*0.2);
+      ctx.fillStyle='#7cfc00'; ctx.fillRect(0,h-60,w,60);
+      // playground equipment
+      ctx.fillStyle='#ef476f'; ctx.fillRect(w*0.08,h-120,18,60); ctx.fillRect(w*0.17,h-120,18,60);
+      ctx.strokeStyle='#17324d'; ctx.lineWidth=5;
+      ctx.beginPath(); ctx.moveTo(w*0.09,h-120); ctx.lineTo(w*0.18,h-120); ctx.stroke();
+    },
+    ice: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#d0f4ff'); g.addColorStop(1,'#7ad7ff');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      ctx.fillStyle='rgba(255,255,255,0.88)'; drawCloud(w*0.2,h*0.16); drawCloud(w*0.72,h*0.18);
+      ctx.fillStyle='#eafcff';
+      ctx.beginPath(); ctx.moveTo(0,h-55); ctx.lineTo(w*0.18,h-155); ctx.lineTo(w*0.35,h-55); ctx.fill();
+      ctx.beginPath(); ctx.moveTo(w*0.55,h-55); ctx.lineTo(w*0.75,h-180); ctx.lineTo(w,h-55); ctx.fill();
+    },
+    desert: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#ffda79'); g.addColorStop(1,'#f6a63e');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      drawSun(w*0.12, h*0.17, '#ffe566');
+      ctx.fillStyle='#e8a34a';
+      for (let x=-60; x<w; x+=200) { ctx.beginPath(); ctx.ellipse(x+90,h-50,155,40,0,0,Math.PI*2); ctx.fill(); }
+    },
+    space: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#0d0d1f'); g.addColorStop(1,'#1f1052');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      ctx.fillStyle='#ffffff';
+      for (let i=0;i<80;i++) { const x=(i*157)%w, y=(i*83)%h; ctx.globalAlpha=Math.sin(i*0.9+bobTime*2)*0.4+0.5; ctx.fillRect(x,y,i%3===0?3:2,i%3===0?3:2); }
+      ctx.globalAlpha=1;
+      ctx.fillStyle='#bdc3d4'; ctx.beginPath(); ctx.arc(w*0.12,h*0.2,40,0,Math.PI*2); ctx.fill();
+      ctx.fillStyle='#9999a8'; ctx.beginPath(); ctx.arc(w*0.1,h*0.17,9,0,Math.PI*2); ctx.arc(w*0.15,h*0.24,13,0,Math.PI*2); ctx.fill();
+    },
+    magnet: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#e0f2fe'); g.addColorStop(1,'#bac8d3');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      ctx.strokeStyle='rgba(100,150,200,0.12)'; ctx.lineWidth=1.5;
+      for (let x=0;x<w;x+=55) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,h); ctx.stroke(); }
+      const md = getLevelData();
+      if (md.magnet) { drawMagnet(sx(md.magnet.x), sy(md.magnet.y)); }
+    },
+    forest: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#b7f0c2'); g.addColorStop(1,'#63c879');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      // trees
+      for (let x=30;x<w;x+=110) {
+        ctx.fillStyle='#7f5539'; ctx.fillRect(x+20,h-120,18,80);
+        ctx.fillStyle='#2d6a4f';
+        ctx.beginPath(); ctx.moveTo(x,h-90); ctx.lineTo(x+30,h-170); ctx.lineTo(x+60,h-90); ctx.fill();
+        ctx.beginPath(); ctx.moveTo(x+5,h-125); ctx.lineTo(x+30,h-195); ctx.lineTo(x+55,h-125); ctx.fill();
+      }
+      ctx.fillStyle='rgba(20,90,40,0.3)'; ctx.fillRect(0,h-50,w,50);
+    },
+    ocean: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#7bdff2'); g.addColorStop(1,'#00b4d8');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      ctx.fillStyle='rgba(255,255,255,0.8)'; drawCloud(w*0.25,h*0.16); drawCloud(w*0.75,h*0.12);
+      ctx.fillStyle='#0077b6';
+      for (let y=h-80;y<h;y+=22) {
+        ctx.beginPath(); ctx.moveTo(0,y);
+        for (let x=0;x<w;x+=40) ctx.lineTo(x, y + Math.sin((x/35)+bobTime*2)*8);
+        ctx.lineTo(w,h); ctx.lineTo(0,h); ctx.fill();
+      }
+    },
+    city: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#a2d2ff'); g.addColorStop(1,'#5f6f94');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      for (let x=10;x<w;x+=88) {
+        const bh = 120 + (x*7)%120;
+        ctx.fillStyle=(x%2===0)?'#495057':'#343a40';
+        ctx.fillRect(x,h-60-bh,58,bh);
+        ctx.fillStyle='#ffd166';
+        for (let wy=h-58-bh+15;wy<h-75;wy+=25) { ctx.fillRect(x+10,wy,10,12); ctx.fillRect(x+32,wy,10,12); }
+      }
+    },
+    volcano: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#44224a'); g.addColorStop(1,'#150d1f');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      ctx.fillStyle='#5e3023'; ctx.beginPath(); ctx.moveTo(w*0.18,h-60); ctx.lineTo(w*0.45,h*0.25); ctx.lineTo(w*0.7,h-60); ctx.fill();
+      ctx.fillStyle='#ff3d00'; ctx.beginPath(); ctx.moveTo(w*0.43,h*0.25); ctx.lineTo(w*0.48,h*0.39); ctx.lineTo(w*0.54,h*0.25); ctx.fill();
+      ctx.fillStyle='rgba(255,61,0,0.28)'; ctx.fillRect(0,h-45,w,45);
+    },
+    rainbow: () => {
+      const g = ctx.createLinearGradient(0,0,0,h);
+      g.addColorStop(0,'#cdb4db'); g.addColorStop(1,'#ffc8dd');
+      ctx.fillStyle=g; ctx.fillRect(0,0,w,h);
+      const colors=['#ff595e','#ffca3a','#8ac926','#1982c4','#6a4c93'];
+      ctx.lineWidth=12;
+      colors.forEach((c,i)=>{ ctx.strokeStyle=c; ctx.beginPath(); ctx.arc(w*0.5,h*0.55,180+i*15,Math.PI,Math.PI*2); ctx.stroke(); });
+      ctx.fillStyle='rgba(255,255,255,0.9)'; drawCloud(w*0.18,h*0.25); drawCloud(w*0.78,h*0.22);
+    }
+  };
+  (themes[data.theme] || themes.playground)();
+}
+
+function drawSun(x, y, color) {
+  ctx.fillStyle=color;
+  ctx.beginPath(); ctx.arc(x,y,34,0,Math.PI*2); ctx.fill();
+  ctx.strokeStyle='rgba(255,255,255,0.5)'; ctx.lineWidth=3;
+  for (let i=0;i<8;i++) {
+    const a=i*Math.PI/4;
+    ctx.beginPath(); ctx.moveTo(x+Math.cos(a)*44,y+Math.sin(a)*44); ctx.lineTo(x+Math.cos(a)*60,y+Math.sin(a)*60); ctx.stroke();
+  }
+}
+
+function drawCloud(x, y) {
+  ctx.beginPath();
+  ctx.arc(x,y,24,0,Math.PI*2); ctx.arc(x+25,y+8,22,0,Math.PI*2); ctx.arc(x-25,y+10,18,0,Math.PI*2);
+  ctx.fill();
+}
+
+function drawMagnet(x, y) {
+  ctx.save();
+  ctx.translate(x,y);
+  ctx.lineWidth=14; ctx.lineCap='round';
+  ctx.strokeStyle='#e94560';
+  ctx.beginPath(); ctx.arc(0,0,42,Math.PI*0.15,Math.PI*0.85); ctx.stroke();
+  ctx.strokeStyle='#48cae4';
+  ctx.beginPath(); ctx.arc(0,0,42,Math.PI*1.15,Math.PI*1.85); ctx.stroke();
+  ctx.fillStyle='#fff'; ctx.font='bold 14px Nunito,Arial'; ctx.textAlign='center';
+  ctx.fillText('MAGNET',0,4);
+  ctx.restore();
+}
+
+function drawPlatforms() {
+  const data = getLevelData();
+  const colors = {
+    grass:'#51b95b', wood:'#b87935', ice:'#9be7ff', sand:'#d99a43', moon:'#a7a7b3',
+    metal:'#8fa6b8', normal:'#4ea8de', rough:'#9b5f2a', moss:'#40916c', log:'#8b5e34',
+    float:'#48cae4', concrete:'#adb5bd', rock:'#6c584c', cloud:'#e8f4ff'
+  };
+  data.platforms.forEach((p, idx) => {
+    let py = sy(p.y);
+    if (p.bob) py += Math.sin(bobTime + idx * 0.7) * 8;
+    const px = sx(p.x), pw = sx(p.w), ph = sy(p.h);
+    ctx.fillStyle = colors[p.type] || '#4ea8de';
+    ctx.beginPath();
+    const r = 8;
+    ctx.moveTo(px+r, py); ctx.lineTo(px+pw-r, py);
+    ctx.quadraticCurveTo(px+pw, py, px+pw, py+r);
+    ctx.lineTo(px+pw, py+ph); ctx.lineTo(px, py+ph); ctx.lineTo(px, py+r);
+    ctx.quadraticCurveTo(px, py, px+r, py);
+    ctx.closePath(); ctx.fill();
+    // top highlight
+    ctx.fillStyle = 'rgba(255,255,255,0.25)';
+    ctx.fillRect(px+6, py+4, pw-12, 6);
+    // special surfaces
+    if (p.type==='ice') {
+      ctx.strokeStyle='rgba(255,255,255,0.7)'; ctx.lineWidth=1.5;
+      for (let i=px+15;i<px+pw;i+=32) {
+        ctx.beginPath(); ctx.moveTo(i,py+5); ctx.lineTo(i+18,py+ph-5); ctx.stroke();
+      }
+    }
+    if (p.type==='sand'||p.type==='rock') {
+      ctx.fillStyle=p.type==='sand'?'#b87935':'#6b3f1d';
+      for (let i=px+8;i<px+pw;i+=18) ctx.fillRect(i,py+7,10,4);
+    }
+  });
+}
+
+/* ── EDUCATIONAL FACT POPUP ── */
+let factPopup = { text:'', x:0, y:0, life:0, color:'#ffd166' };
+function showFact(text, x, y, color) {
+  factPopup = { text, x, y, life: 2.5, color: color || '#ffd166' };
+}
+function drawFactPopup() {
+  if (factPopup.life <= 0) return;
+  factPopup.life -= 0.025;
+  const alpha = Math.min(1, factPopup.life);
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.font = 'bold 13px Nunito,Arial';
+  const w = ctx.measureText(factPopup.text).width + 20;
+  const x = Math.min(Math.max(factPopup.x - w/2, 4), canvas.width - w - 4);
+  const y = factPopup.y - 12 - (2.5 - factPopup.life) * 18;
+  ctx.fillStyle = factPopup.color;
+  ctx.beginPath(); ctx.roundRect(x, y-18, w, 26, 8); ctx.fill();
+  ctx.fillStyle = '#1a1a2e';
+  ctx.fillText(factPopup.text, x+10, y+1);
+  ctx.restore();
+}
+
+function drawHazards() {
+  const data = getLevelData();
+
+  const drawHaz = (h, bx, by, bw, bh) => {
+    const t = h.type;
+    const pulse = Math.sin(bobTime * 3) * 2;
+
+    if (t === 'spike') {
+      // Row of red spikes — "Spikes are sharp! Avoid contact forces."
+      ctx.fillStyle = '#e94560';
+      const spikeCount = Math.max(3, Math.floor(bw / 16));
+      const sw = bw / spikeCount;
+      for (let i = 0; i < spikeCount; i++) {
+        ctx.beginPath();
+        ctx.moveTo(bx + i*sw, by + bh);
+        ctx.lineTo(bx + i*sw + sw/2, by);
+        ctx.lineTo(bx + (i+1)*sw, by + bh);
+        ctx.closePath(); ctx.fill();
+      }
+      ctx.fillStyle = 'rgba(255,100,100,0.18)';
+      ctx.fillRect(bx, by - pulse, bw, bh + pulse);
+    }
+
+    else if (t === 'lava') {
+      // Glowing lava pool — "Lava = extreme heat. High thermal energy!"
+      ctx.fillStyle = '#ff3d00';
+      ctx.beginPath(); ctx.roundRect(bx, by, bw, bh, 4); ctx.fill();
+      // bubbles
+      ctx.fillStyle = '#ff7b00';
+      for (let i = bx+8; i < bx+bw-8; i += 18) {
+        const bubbleY = by + bh*0.35 + Math.sin(bobTime*2 + i)*3;
+        ctx.beginPath(); ctx.arc(i, bubbleY, 5, Math.PI, 0); ctx.fill();
+      }
+      // glow
+      ctx.fillStyle = 'rgba(255,61,0,0.15)';
+      ctx.fillRect(bx - 4, by - 6 - pulse, bw + 8, 10);
+      ctx.fillStyle = '#ffe066';
+      ctx.font = 'bold 10px Nunito,Arial'; ctx.textAlign = 'center';
+      ctx.fillText('🔥 LAVA', bx + bw/2, by - 3);
+      ctx.textAlign = 'left';
+    }
+
+    else if (t === 'electric') {
+      // Electric hazard with zigzag — "Electricity = energy flow in circuits!"
+      ctx.fillStyle = '#1a1a2e';
+      ctx.fillRect(bx, by, bw, bh);
+      ctx.strokeStyle = '#ffd166'; ctx.lineWidth = 2.5;
+      ctx.beginPath();
+      const steps = Math.floor(bw / 14);
+      for (let i = 0; i <= steps; i++) {
+        const ex = bx + (i / steps) * bw;
+        const ey = by + (i % 2 === 0 ? bh * 0.8 : bh * 0.1) + Math.random() * 3;
+        if (i === 0) ctx.moveTo(ex, ey); else ctx.lineTo(ex, ey);
+      }
+      ctx.stroke();
+      // sparks
+      ctx.fillStyle = '#fff';
+      for (let i = 0; i < 3; i++) {
+        const sx2 = bx + Math.random() * bw;
+        const sy2 = by + Math.random() * bh;
+        ctx.beginPath(); ctx.arc(sx2, sy2, 2, 0, Math.PI*2); ctx.fill();
+      }
+      ctx.fillStyle = '#ffd166'; ctx.font = 'bold 10px Nunito,Arial'; ctx.textAlign='center';
+      ctx.fillText('⚡ ZAP', bx + bw/2, by - 3); ctx.textAlign='left';
+    }
+
+    else if (t === 'puddle') {
+      // Water puddle — "Water resistance slows motion — friction!"
+      ctx.fillStyle = 'rgba(72,202,228,0.55)';
+      ctx.beginPath(); ctx.ellipse(bx+bw/2, by+bh/2, bw/2, bh/2, 0, 0, Math.PI*2); ctx.fill();
+      ctx.strokeStyle = '#118ab2'; ctx.lineWidth = 2;
+      ctx.beginPath(); ctx.ellipse(bx+bw/2, by+bh/2, bw/2, bh/2, 0, 0, Math.PI*2); ctx.stroke();
+      // ripple
+      ctx.strokeStyle = 'rgba(17,138,178,0.3)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.ellipse(bx+bw/2, by+bh/2, bw/2 + pulse*2, bh/2 + pulse, 0, 0, Math.PI*2); ctx.stroke();
+      ctx.fillStyle = '#118ab2'; ctx.font = 'bold 10px Nunito,Arial'; ctx.textAlign='center';
+      ctx.fillText('💧 SLIP', bx+bw/2, by - 3); ctx.textAlign='left';
+    }
+
+    else if (t === 'crack') {
+      // Ice crack — "Thin ice! Less support force."
+      ctx.fillStyle = '#2a4a5e';
+      ctx.fillRect(bx, by, bw, bh);
+      ctx.strokeStyle = '#eafcff'; ctx.lineWidth = 1.5;
+      for (let i = 0; i < 4; i++) {
+        const cx = bx + (i/4)*bw + Math.random()*10;
+        ctx.beginPath(); ctx.moveTo(cx, by); ctx.lineTo(cx+8, by+bh); ctx.stroke();
+      }
+      ctx.fillStyle = '#9be7ff'; ctx.font = 'bold 10px Nunito,Arial'; ctx.textAlign='center';
+      ctx.fillText('❄ CRACK', bx+bw/2, by-3); ctx.textAlign='left';
+    }
+
+    else if (t === 'cactus') {
+      // Cactus — "Cactus spines = sharp reaction force!"
+      const cw = Math.max(18, bw / Math.max(1, Math.floor(bw/30)));
+      const count = Math.floor(bw / cw);
+      for (let i = 0; i < count; i++) {
+        const cx = bx + i * cw + cw/2;
+        // body
+        ctx.fillStyle = '#2d6a4f';
+        ctx.fillRect(cx - 7, by, 14, bh);
+        // arms
+        ctx.fillRect(cx - 16, by + 6, 9, 7);
+        ctx.fillRect(cx + 7, by + 10, 9, 7);
+        // spines
+        ctx.fillStyle = '#95d5b2';
+        for (let sy3 = by+3; sy3 < by+bh; sy3 += 6) {
+          ctx.fillRect(cx - 8, sy3, 3, 2);
+          ctx.fillRect(cx + 5, sy3, 3, 2);
+        }
+      }
+    }
+
+    else if (t === 'asteroid') {
+      // Asteroid — "Asteroids travel in space with no air friction!"
+      ctx.fillStyle = '#5a5268';
+      ctx.beginPath(); ctx.ellipse(bx+bw/2, by+bh/2, bw/2, bh/2, bobTime*0.3, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = '#6d6875';
+      ctx.beginPath(); ctx.arc(bx+bw*0.35, by+bh*0.35, bh*0.2, 0, Math.PI*2); ctx.fill();
+      ctx.fillStyle = '#888'; ctx.font='bold 10px Nunito,Arial'; ctx.textAlign='center';
+      ctx.fillText('☄ ROCK', bx+bw/2, by-3); ctx.textAlign='left';
+    }
+
+    else if (t === 'thorn') {
+      // Thorns — "Thorns use contact force to stop movement."
+      ctx.fillStyle = '#1b4332';
+      ctx.fillRect(bx, by + bh/2, bw, bh/2);
+      ctx.fillStyle = '#40916c';
+      const tc = Math.floor(bw / 12);
+      for (let i = 0; i < tc; i++) {
+        const tx = bx + i * 12 + 6;
+        ctx.beginPath(); ctx.moveTo(tx-5, by+bh); ctx.lineTo(tx, by); ctx.lineTo(tx+5, by+bh); ctx.fill();
+      }
+    }
+
+    else if (t === 'wave') {
+      // Ocean wave — "Waves carry energy through water!"
+      ctx.fillStyle = 'rgba(0,180,216,0.6)';
+      ctx.beginPath();
+      ctx.moveTo(bx, by+bh);
+      for (let wx = bx; wx <= bx+bw; wx += 4) {
+        ctx.lineTo(wx, by + bh*0.4 + Math.sin((wx-bx)/8 + bobTime*3)*bh*0.4);
+      }
+      ctx.lineTo(bx+bw, by+bh); ctx.closePath(); ctx.fill();
+      ctx.fillStyle = '#00b4d8'; ctx.font='bold 10px Nunito,Arial'; ctx.textAlign='center';
+      ctx.fillText('🌊 WAVE', bx+bw/2, by-3); ctx.textAlign='left';
+    }
+
+    else if (t === 'traffic') {
+      // Traffic cone — "Stop! Safety barriers use friction to slow cars."
+      const cones = Math.max(2, Math.floor(bw/28));
+      for (let i = 0; i < cones; i++) {
+        const cx = bx + i*(bw/cones) + (bw/cones)/2;
+        ctx.fillStyle = '#f77f00';
+        ctx.beginPath(); ctx.moveTo(cx-10, by+bh); ctx.lineTo(cx+10,by+bh); ctx.lineTo(cx+3,by); ctx.lineTo(cx-3,by); ctx.closePath(); ctx.fill();
+        ctx.fillStyle = '#fff'; ctx.fillRect(cx-8, by+bh*0.45, 16, 4);
+        ctx.fillRect(cx-6, by+bh*0.65, 12, 4);
+      }
+    }
+
+    else if (t === 'storm') {
+      // Storm cloud — "Storms have kinetic energy from air movement!"
+      ctx.fillStyle = '#4a4060';
+      ctx.beginPath();
+      ctx.arc(bx+bw*0.3, by+bh*0.5, bh*0.7, 0, Math.PI*2);
+      ctx.arc(bx+bw*0.55, by+bh*0.4, bh*0.8, 0, Math.PI*2);
+      ctx.arc(bx+bw*0.75, by+bh*0.5, bh*0.6, 0, Math.PI*2);
+      ctx.fill();
+      ctx.strokeStyle = '#ffd166'; ctx.lineWidth=2;
+      // lightning bolt
+      const lx = bx+bw/2, ly = by+bh;
+      ctx.beginPath(); ctx.moveTo(lx-4,ly-bh); ctx.lineTo(lx+2,ly-bh*0.5); ctx.lineTo(lx-2,ly-bh*0.5); ctx.lineTo(lx+5,ly); ctx.stroke();
+    }
+
+    else {
+      // Fallback generic
+      ctx.fillStyle = '#ef476f';
+      ctx.fillRect(bx, by, bw, bh);
+    }
+  };
+
+  data.hazards.forEach(h => drawHaz(h, sx(h.x), sy(h.y), sx(h.w), sy(h.h)));
+
+  if (data.movingHazard) {
+    const mh = data.movingHazard;
+    drawHaz(mh, sx(mh.x), sy(mh.y), sx(mh.w), sy(mh.h));
+    // arrow showing direction
+    ctx.fillStyle = '#fff'; ctx.font = '12px Arial';
+    ctx.fillText(mh.vx > 0 ? '→' : '←', sx(mh.x) + sx(mh.w)/2 - 5, sy(mh.y) - 4);
+  }
+}
+
+function drawStar() {
+  const star = getLevelData().star;
+  const x = sx(star.x), y = sy(star.y);
+  const pulse = 1 + Math.sin(bobTime*2) * 0.13;
+  // glow
+  const grd = ctx.createRadialGradient(x,y,0,x,y,48);
+  grd.addColorStop(0,'rgba(255,215,30,0.4)'); grd.addColorStop(1,'rgba(255,215,30,0)');
+  ctx.fillStyle=grd; ctx.beginPath(); ctx.arc(x,y,48,0,Math.PI*2); ctx.fill();
+  ctx.save(); ctx.translate(x,y); ctx.scale(pulse,pulse);
+  ctx.fillStyle='#ffd166'; ctx.strokeStyle='#e8a000'; ctx.lineWidth=2;
+  ctx.beginPath();
+  for (let i=0;i<10;i++) {
+    const r = i%2===0?26:11;
+    const a = Math.PI/5*i - Math.PI/2;
+    if (i===0) ctx.moveTo(Math.cos(a)*r, Math.sin(a)*r);
+    else ctx.lineTo(Math.cos(a)*r, Math.sin(a)*r);
+  }
+  ctx.closePath(); ctx.fill(); ctx.stroke();
+  ctx.restore();
+}
+
+function drawBall() {
+  // Trail
+  ball.trail.forEach((t, i) => {
+    const alpha = (1 - i/ball.trail.length) * 0.18;
+    const r = ball.r * (1 - i/ball.trail.length) * 0.8;
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = '#06d6a0';
+    ctx.beginPath(); ctx.arc(t.x, t.y, r, 0, Math.PI*2); ctx.fill();
+  });
+  ctx.globalAlpha = 1;
+
+  ctx.save();
+  ctx.translate(ball.x, ball.y);
+  ctx.scale(ball.squishX, ball.squishY);
+
+  // Shadow
+  ctx.globalAlpha = 0.2;
+  ctx.fillStyle = '#000';
+  ctx.beginPath(); ctx.ellipse(0, ball.r+6, ball.r*0.8, ball.r*0.22, 0, 0, Math.PI*2); ctx.fill();
+  ctx.globalAlpha = 1;
+
+  // Ball body gradient
+  const g = ctx.createRadialGradient(-ball.r*0.3, -ball.r*0.3, 2, 0, 0, ball.r);
+  g.addColorStop(0,'#80ffda'); g.addColorStop(0.5,'#06d6a0'); g.addColorStop(1,'#03a376');
+  ctx.fillStyle = g;
+  ctx.beginPath(); ctx.arc(0,0,ball.r,0,Math.PI*2); ctx.fill();
+  ctx.strokeStyle = '#028a60'; ctx.lineWidth = 3;
+  ctx.stroke();
+
+  // Eyes
+  ctx.fillStyle='#fff';
+  ctx.beginPath(); ctx.arc(-6,-4,5,0,Math.PI*2); ctx.arc(6,-4,5,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#1a1a2e';
+  const eyeX = ball.vx > 0.5 ? 2 : ball.vx < -0.5 ? -2 : 0;
+  ctx.beginPath(); ctx.arc(-6+eyeX,-4,3,0,Math.PI*2); ctx.arc(6+eyeX,-4,3,0,Math.PI*2); ctx.fill();
+
+  // Mouth
+  ctx.strokeStyle = '#1a1a2e'; ctx.lineWidth = 2;
+  ctx.beginPath();
+  if (!ball.onGround && ball.vy < -2) ctx.arc(0, 6, 6, 0.1, Math.PI-0.1); // happy jumping
+  else if (!ball.onGround && ball.vy > 5) ctx.arc(0, 9, 5, Math.PI+0.2, -0.2); // scared falling
+  else ctx.arc(0, 4, 7, 0.1, Math.PI-0.1); // normal
+  ctx.stroke();
+  ctx.restore();
+}
+
+function drawPhysicsLabels() {
+  const data = getLevelData();
+  if (data.theme === 'space') ctx.fillStyle = '#ffffff';
+  else ctx.fillStyle = 'rgba(0,0,0,0.55)';
+  ctx.font = 'bold 13px Nunito,Arial';
+
+  if (keys.ArrowLeft || keys.KeyA) {
+    ctx.fillText('← Force', ball.x - 88, ball.y - 30);
+  }
+  if (keys.ArrowRight || keys.KeyD) {
+    ctx.fillText('Force →', ball.x + 25, ball.y - 30);
+  }
+  if (ball.onGround) {
+    ctx.fillText('⬆ Support', ball.x - 32, ball.y + ball.r + 22);
+  }
+  if (!ball.onGround && ball.vy > 0) {
+    ctx.fillText('⬇ Gravity', ball.x + 22, ball.y - 8);
+  }
+}
+
+function drawMiniMap() {
+  if (!miniCtx) return;
+  const data = getLevelData();
+  const mw = miniMap.width, mh = miniMap.height;
+  miniCtx.clearRect(0,0,mw,mh);
+  miniCtx.fillStyle = 'rgba(255,255,255,0.08)';
+  miniCtx.fillRect(0,0,mw,mh);
+
+  const mapX = x => (x / canvas.width) * mw;
+  const mapY = y => (y / canvas.height) * mh;
+
+  miniCtx.fillStyle = 'rgba(255,255,255,0.32)';
+  data.platforms.forEach((p, idx) => {
+    let py = sy(p.y);
+    if (p.bob) py += Math.sin(bobTime + idx * 0.7) * 8;
+    miniCtx.fillRect(mapX(sx(p.x)), mapY(py), Math.max(3, mapX(sx(p.w))), Math.max(2, mapY(sy(p.h))));
+  });
+
+  miniCtx.fillStyle = '#ffd166';
+  miniCtx.beginPath(); miniCtx.arc(mapX(sx(data.star.x)), mapY(sy(data.star.y)), 4, 0, Math.PI*2); miniCtx.fill();
+
+  miniCtx.fillStyle = '#06d6a0';
+  miniCtx.beginPath(); miniCtx.arc(mapX(ball.x), mapY(ball.y), 4, 0, Math.PI*2); miniCtx.fill();
+
+  miniCtx.strokeStyle = 'rgba(255,255,255,0.75)';
+  miniCtx.lineWidth = 1;
+  miniCtx.strokeRect(mapX(gameView.scrollLeft), mapY(gameView.scrollTop), mapX(gameView.clientWidth), mapY(gameView.clientHeight));
+}
+
+function draw() {
+  drawBackground();
+  drawLadders();
+  drawPlatforms();
+  drawHazards();
+  drawStar();
+  drawParticles();
+  drawBall();
+  drawPhysicsLabels();
+  drawFactPopup();
+  drawMiniMap();
+}
+
+function gameLoop() {
+  if (!gameRunning || paused) return;
+  updateParticles();
+  applyPhysics();
+  centerCameraOnBall();
+  draw();
+  animationId = requestAnimationFrame(gameLoop);
+}
+
+/* ── PAUSE ── */
+function togglePause() {
+  if (!gameRunning) return;
+  paused = !paused;
+  if (paused) SFX.pause(); else SFX.resume();
+  pauseOverlay.classList.toggle('active', paused);
+  pauseBtn.textContent = paused ? '▶' : '⏸';
+  if (!paused) { cancelAnimationFrame(animationId); gameLoop(); }
+}
+
+/* ── EVENT LISTENERS ── */
+document.querySelectorAll('button').forEach(btn => {
+  btn.addEventListener('click', () => SFX.click());
+});
+
+document.addEventListener('keydown', e => {
+  if (Object.prototype.hasOwnProperty.call(keys, e.code)) { keys[e.code] = true; }
+  if (['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Space'].includes(e.code)) e.preventDefault();
+  if (e.code === 'Escape' || e.code === 'KeyP') togglePause();
+});
+document.addEventListener('keyup', e => {
+  if (Object.prototype.hasOwnProperty.call(keys, e.code)) keys[e.code] = false;
+});
+
+startBtn.addEventListener('click', startGame);
+playFromInstructions.addEventListener('click', startGame);
+instructionsBtn.addEventListener('click', () => showScreen(instructionsScreen));
+backBtn.addEventListener('click', () => showScreen(startScreen));
+restartBtn.addEventListener('click', startGame);
+pauseBtn.addEventListener('click', togglePause);
+resumeBtn.addEventListener('click', togglePause);
+soundBtn.addEventListener('click', () => {
+  resumeAudio();
+  soundEnabled = !soundEnabled;
+  updateSoundButton();
+});
+pauseHomeBtn.addEventListener('click', () => {
+  gameRunning = false; paused = false; respawning = false; resetKeys();
+  clearInterval(timerId); cancelAnimationFrame(animationId);
+  pauseOverlay.classList.remove('active');
+  showScreen(startScreen);
+});
+homeBtn.addEventListener('click', () => {
+  gameRunning = false; paused = false; respawning = false; resetKeys();
+  clearInterval(timerId); cancelAnimationFrame(animationId);
+  showScreen(startScreen);
+});
+zoomOutBtn.addEventListener('click', () => setZoom(gameZoom - 0.10));
+zoomInBtn.addEventListener('click', () => setZoom(gameZoom + 0.10));
+zoomResetBtn.addEventListener('click', () => setZoom(1));
+window.addEventListener('resize', () => { resizeCanvas(); if (gameRunning && !paused) draw(); });
+window.addEventListener('blur', resetKeys);
+
+updateSoundButton();
+resizeCanvas();
+</script>
+</body>
+</html>
